@@ -1,0 +1,36 @@
+$bg-color: #156ABB;
+$a-color: #FFFFFF;
+
+
+.footer-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	min-height: 50px;
+	background: $bg-color;
+	color: $a-color;
+	padding: 25px;
+
+	#copyright {
+		width: 49%;
+		display: inline-block;
+		text-align: center;
+	}
+
+	#links {
+		width: 49%;
+		display: inline-block;
+		text-align: center;
+
+		a {
+			text-decoration: none;
+			color: $a-color;
+			vertical-align: middle;
+		}
+
+		a:hover {
+			color: darken($a-color, 25%);
+		}
+	}
+}

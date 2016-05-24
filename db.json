@@ -1,0 +1,30 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"name": "Automotive",
+			"categories":[
+				{ 
+					"id": 1,
+					"name": "New"
+				},
+				{ 
+					"id": 2,
+					"name": "Used"
+				},
+				{ 
+					"id": 3,
+					"name": "Certified"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "Real Estate"
+		},
+		{
+			"id": 3,
+			"name": "Misc"
+		}
+	]
+}
