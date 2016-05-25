@@ -4,8 +4,67 @@ export default class vdpInfoController {
   }
 
   /* @ngInject */
-  constructor() {
-    this.title = "I am a vdpInfo component"
+  constructor($scope) {
+    this.price = "$57,345.00";
+    this.make = "Toyota";
+    this.model = "Tundra";
+    this.year = "2016";
+    this.odometer = "15,000km";
+    this.transmission = "6-speed A/T";
+    this.drivetrain = "Four Wheel Drive";
+    this.exterior = "Black";
+    this.interior = "";
+    this.vin = "5TFAY5F19GX552575";
+    this.stocknum = "TR2718";
+    this.stupid = ['Cloth Upholstery',
+                   'Air Conditioning',
+                   'Cruise Control'];
+
+    this.features = ['Cloth',
+          'UpholsteryAir',
+          'ConditioningTilt',
+          'Steering',
+          'WheelPower',
+          'Telescopic',
+          'SteeringCruise',
+          'ControlPower',
+          'WindowsPower',
+          'LocksTraction',
+          'ControlElectronic',
+          'Stability',
+          'AdapterAluminum',
+          'WheelsTire',
+          'Pressure',
+          'MonitoringBench',
+          'SeatBucket',
+          'SeatsFront',
+          'Floor',
+          'MatsChild',
+          'Safety',
+          'LocksTinted',
+          'Windows',
+          'OEMDriver',
+          'MirrorHeated',
+          'MirrorsPower',
+          'BrakesPower',
+          'SteeringDriver',
+          'Front',
+          'AirbagDriver',
+          'Side',
+          'Curtain'];
+          
+    this.basicYears = "3";
+    this.basicMiles = "60,000";
+    this.drivetrainYears = "5";
+    this.drivetrainMiles = "100,000";
+    this.corrosionYears = "5";
+    this.corrosionMiles = "Unlimited";
+    this.hybridYears = "8";
+    this.hybridMiles = "160,000";
+    this.hybridNote = "Applies to hybrid vehicles only";
+    this.roadsideYears = "5";
+    this.roadsideMiles = "100,000";
+
     document.getElementById("tab-1-content").style.display = "block";
   }
 
