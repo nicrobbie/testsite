@@ -19,6 +19,7 @@ import records from './features/records';
 import footer from './components/footer';
 import filterBank from './components/filterBank';
 import pagination from './components/pagination';
+import vdpAction from './components/vdpAction';
 
 
 //console.log(productService.getProducts());
@@ -28,7 +29,7 @@ import pagination from './components/pagination';
 //import sampleModule2 from './features/sample';
 //import testcomponent from './components/testcomponent';
 
-export default angular.module('testsite', [uirouter, footer, main, records, filterBank, pagination])
+export default angular.module('testsite', [uirouter, footer, main, records, filterBank, pagination, vdpAction])
   .config(config)
   .config(routes)
   .constant("AppConstants", appConstants)
