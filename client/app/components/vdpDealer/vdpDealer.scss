@@ -1,0 +1,88 @@
+@import "../../bourbon/bourbon";
+@import "../../neat/neat";
+
+$desktop: new-breakpoint(min-width 700px);
+
+
+#dealer-content {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	@include media($desktop) {
+		width: 80%;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+
+	#hours {
+		@include span-columns(12);
+
+		@include media($desktop) {
+			@include span-columns(4);
+		}
+		text-align: center;
+
+		table {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+
+
+	#contact {
+		@include span-columns(12);
+
+		@include media($desktop) {
+			@include span-columns(4);
+		}
+		text-align: center;
+	}
+
+
+
+	#address {
+		@include span-columns(12);
+
+		@include media($desktop) {
+			@include span-columns(4);
+		}
+		text-align: center;
+
+
+		$btn-bg-start: #53AEE0;
+		$btn-bg-end: #289AD8;
+
+		button {
+			background-color: $btn-bg-start;
+			@include background-image(linear-gradient($btn-bg-start, $btn-bg-end));
+		    border: 1px solid #185d82;
+		    color: #FFF;
+		    margin-bottom: 10px;
+		    margin-top: 10px;
+		    text-shadow: 0px -1px #185d82;
+			border-radius: 5px;
+			box-shadow: inset 0px 1px rgba(255,255,255,0.4);
+			letter-spacing: 2px;
+			padding: 15px 0;
+			text-align: center;
+			text-transform: uppercase;
+			width: 50%;
+			font-family: "Century Gothic", sans;
+		}
+
+		button:hover {
+			cursor: pointer;
+			@include background-image(linear-gradient(darken($btn-bg-start, 10%), darken($btn-bg-end, 10%)));
+		}
+
+		button:active {
+			@include background-image(linear-gradient(darken($btn-bg-end, 10%), darken($btn-bg-start, 10%)));
+		}
+	}
+}

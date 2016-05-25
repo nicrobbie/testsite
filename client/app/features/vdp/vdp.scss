@@ -1,0 +1,50 @@
+@import "../../bourbon/bourbon";
+@import "../../neat/neat";
+
+$desktop: new-breakpoint(min-width 700px);
+
+#vdp-content {
+	@include outer-container(100%);
+}
+
+vdp-banner {
+	@include span-columns(12);
+}
+
+
+vdp-images {
+	@include span-columns(12);
+
+	@include media($desktop) {
+		@include span-columns(6);
+	}
+}
+
+
+
+vdp-info {
+	@include span-columns(12);
+
+	@include media($desktop) {
+		@include span-columns(6);
+	}
+}
+
+
+
+vdp-actions {
+	@include span-columns(12);
+	padding: 20px;
+}
+
+
+
+vdp-dealer {
+	@include span-columns(12);
+}
+
+
+
+vdp-similar {
+	@include span-columns(12);
+}
