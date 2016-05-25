@@ -2,27 +2,74 @@
 @import "../../neat/neat";
 
 $font-color: #FFFFFF;
+<<<<<<< HEAD
+$base-spacing: 1.5em !default;
+$base-border-color: gainsboro !default;
+$base-line-height: 1.5em !default;
+
+$search-bar-border-color: $base-border-color;
+$search-bar-border: 1px solid $search-bar-border-color;
+$search-bar-background: lighten($search-bar-border-color, 10%);
+
+$desktop: new-breakpoint(min-width 700px);
+
+
+
+h1 {
+	font-size: 500%;
+	margin: 0px;
+	padding-top: 50px;
+	padding-bottom: 25px;
+	text-shadow: 2px 2px 2px #000; 
+}
+
+
+
+=======
 
 h1 {
 	font-size: 500%;
 }
 
+>>>>>>> origin/master
 h3 {
 	font-weight: normal;
 }
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/master
 #content {
 	width: 100%;
 	background: url("../../../assets/images/cDemoLiveHomeBG.jpg");
 	color: $font-color;
+<<<<<<< HEAD
+	box-shadow: 5px 5px 3px #222, -5px 5px 3px #222;
 }
 
+
+
+=======
+}
+
+>>>>>>> origin/master
 #search-content {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 	font-family: "Century Gothic", sans;
 	
+<<<<<<< HEAD
+	@include outer-container(95%);
+
+	@include media($desktop) {
+		width: 75%;
+	}
+}
+
+=======
 	@include outer-container(50%);
 
 }
@@ -34,6 +81,7 @@ $base-line-height: 1.5em !default;
 $search-bar-border-color: $base-border-color;
 $search-bar-border: 1px solid $search-bar-border-color;
 $search-bar-background: lighten($search-bar-border-color, 10%);
+>>>>>>> origin/master
 
 
 #div-search-bar {
@@ -53,11 +101,23 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 }
 
 
+<<<<<<< HEAD
+
+#div-product {
+	@include span-columns(12);
+	padding-top: 10px;
+
+	@include media($desktop) {
+		@include span-columns(6);
+	}
+
+=======
 #div-product {
 	@include span-columns(6);
 	@media screen and (max-width: 700px){
 		@include span-columns(12);
 	}
+>>>>>>> origin/master
 	#product {
 		appearance: none;
 		background-color: white;
@@ -69,11 +129,25 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 	}
 }
 
+<<<<<<< HEAD
+
+
+#div-category {
+	@include span-columns(12);
+	
+	padding-top: 10px;
+
+	@include media($desktop) {
+		@include span-columns(6);
+	}
+
+=======
 #div-category {
 	@include span-columns(6);
 	@media screen and (max-width: 700px){
 		@include span-columns(12);
 	}
+>>>>>>> origin/master
 	#category {
 		appearance: none;
 		background-color: white;
@@ -85,6 +159,33 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 	}
 }
 
+<<<<<<< HEAD
+
+
+#div-search-button {
+
+	$button-top: #53AEE0;
+	$button-bottom: #289AD8;
+	$button-border: #185D82;
+
+	@include span-columns(12);
+	
+	@include media($desktop) {
+		@include span-columns(6);
+		@include shift(3);
+	}
+
+	button {
+		background-color: $button-top;
+		@include background-image(linear-gradient($button-top, $button-bottom));
+	    border: 1px solid $button-border;
+	    color: #FFFFFF;
+	    margin-bottom: 10px;
+	    margin-top: 10px;
+	    text-shadow: 0px -1px $button-border;
+		border-radius: 5px;
+		box-shadow: inset 0px 1px rgba(255,255,255,0.4);
+=======
 #div-search-button {
 	@include span-columns(6);
 	@include shift(3);
@@ -135,10 +236,26 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 		box-shadow: inset 0px 1px rgba(255,255,255,0.4);
 		//font-size: 1em;
 		//font-weight: 200;
+>>>>>>> origin/master
 		letter-spacing: 2px;
 		padding: 15px 0;
 		text-align: center;
 		text-transform: uppercase;
+<<<<<<< HEAD
+		width: 100%;
+	}
+
+	button:hover {
+		@include background-image(linear-gradient(darken($button-top, 15%), darken($button-bottom, 15%)));
+		cursor: pointer;
+	}
+
+	button:active {
+		@include background-image(linear-gradient(darken($button-bottom, 15%), darken($button-top, 15%)));
+		cursor: pointer;
+	}
+}
+=======
 	}
 
 	#search-button:hover {
@@ -193,3 +310,4 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 }
 
 */
+>>>>>>> origin/master
