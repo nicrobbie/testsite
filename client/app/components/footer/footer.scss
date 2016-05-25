@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-@import "../../bourbon/bourbon";
-@import "../../neat/neat";
-
-$bg-color: #156ABB;
-$a-color: #FFFFFF;
-$desktop: new-breakpoint(min-width 700px);
-
-
-
-.footer-content {
-	@include outer-container(100%);
-=======
 $bg-color: #156ABB;
 $a-color: #FFFFFF;
 
 
 .footer-content {
->>>>>>> origin/master
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -25,36 +11,6 @@ $a-color: #FFFFFF;
 	background: $bg-color;
 	color: $a-color;
 	padding: 25px;
-<<<<<<< HEAD
-	border-top: 1px solid #FFFFFF;
-
-	#copyright {
-		@include span-columns(12);
-
-		@include media($desktop) {
-			@include span-columns(6);
-		}
-
-		width: 100%;
-		display: inline-block;
-		text-align: center;
-		padding: 10px;
-	}
-
-	#links {
-		@include span-columns(12);
-
-		@include media($desktop) {
-			@include span-columns(6);
-		}
-
-		width: 100%;
-		display: inline-block;
-		text-align: center;
-		padding: 10px;
-
-		
-=======
 
 	#copyright {
 		width: 49%;
@@ -67,7 +23,6 @@ $a-color: #FFFFFF;
 		display: inline-block;
 		text-align: center;
 
->>>>>>> origin/master
 		a {
 			text-decoration: none;
 			color: $a-color;
@@ -78,8 +33,4 @@ $a-color: #FFFFFF;
 			color: darken($a-color, 25%);
 		}
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master

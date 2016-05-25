@@ -13,11 +13,7 @@ export default function routes($stateProvider) {
     controller: controller.UID,
     controllerAs: "records"
   }).state("records.state2", {
-<<<<<<< HEAD
-    url: "/records/state2",
-=======
     url: "/state2",
->>>>>>> origin/master
     template: "<h1>State 2</h1>"
   });
 }

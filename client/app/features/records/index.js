@@ -13,10 +13,7 @@ import run from './records.run';
 import config from './records.config';
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 export default angular.module("records" , [uirouter])
 .config(config)
   .config(routes)
