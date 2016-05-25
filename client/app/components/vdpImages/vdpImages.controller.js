@@ -5,6 +5,6 @@ export default class vdpImagesController {
 
   /* @ngInject */
   constructor() {
-    this.title = "I am a vdpImages component"
+    this.title = "2016 Toyota Tundra 4WD";
   }
 }

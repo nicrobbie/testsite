@@ -7,8 +7,37 @@ $desktop: new-breakpoint(min-width 700px);
 
 #info-content {
     padding: 20px;
+
+    td:first-child {
+        font-weight: bold;
+    }
+
+    td {
+        padding: 10px;
+    }
+    
+    table {
+        border-collapse: collapse;
+    }
+
+    tr {
+        border-bottom: 1px solid #CECECE;
+    }
+    
+    tr:last-child {
+        border-bottom: none;
+    }
 }
 
+
+#feature-list {
+
+    li {
+        //display: inline-block;
+        margin: 20px;
+
+    }
+}
 
 
 .accordion-tabs {

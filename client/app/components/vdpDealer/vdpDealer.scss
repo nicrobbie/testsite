@@ -30,6 +30,10 @@ $desktop: new-breakpoint(min-width 700px);
 		table {
 			margin-left: auto;
 			margin-right: auto;
+
+			td {
+				padding: 10px;
+			}
 		}
 	}
 
@@ -42,6 +46,10 @@ $desktop: new-breakpoint(min-width 700px);
 			@include span-columns(4);
 		}
 		text-align: center;
+
+		li {
+			padding: 10px;
+		}
 	}
 
 
@@ -54,7 +62,11 @@ $desktop: new-breakpoint(min-width 700px);
 		}
 		text-align: center;
 
+		li {
+			padding: 10px;
+		}
 
+		
 		$btn-bg-start: #53AEE0;
 		$btn-bg-end: #289AD8;
 
