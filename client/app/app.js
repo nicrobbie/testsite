@@ -14,11 +14,18 @@ import appConstants from 'appConstants';
 // Import features
 import main from './features/main';
 import records from './features/records';
+import vdp from './features/vdp';
 
 // Import components
 import footer from './components/footer';
 import filterBank from './components/filterBank';
 import pagination from './components/pagination';
+import vdpActions from './components/vdpActions';
+import vdpBanner from './components/vdpBanner';
+import vdpDealer from './components/vdpDealer';
+import vdpImages from './components/vdpImages';
+import vdpInfo from './components/vdpInfo';
+import vdpSimilar from './components/vdpSimilar';
 
 
 //console.log(productService.getProducts());
@@ -28,7 +35,7 @@ import pagination from './components/pagination';
 //import sampleModule2 from './features/sample';
 //import testcomponent from './components/testcomponent';
 
-export default angular.module('testsite', [uirouter, footer, main, records, filterBank, pagination])
+export default angular.module('testsite', [uirouter, footer, main, records, vdp, filterBank, pagination, vdpActions, vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar])
   .config(config)
   .config(routes)
   .constant("AppConstants", appConstants)
