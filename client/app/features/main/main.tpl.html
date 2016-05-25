@@ -1,85 +1,35 @@
 
 <div id="content">
 	<div id="search-content">
-	 	<h1>cDemo Live</h1>
-	 	<h3>{{main.description}}</h3>
+		<div id="search-titles">
+		 	<h1>cDemo Live</h1>
+		 	<h3>{{main.description}}</h3>
+	 	</div>
 	 	<!-- <a ui-sref="records">Records</a> -->
-		<form role="search">
-			<div id="div-search-bar">
-			 	<input type="search" ng-model="main.searchTerm" placeholder="Enter Search" />
-			 	{{main.searchTerm}}
-			</div>
-			
-			<section>
-			 	<div id="div-product">
-					<select id="product" ng-model="main.productSelected">
-						<option ng-repeat="product in main.products" value="{{product.id}}">{{product.name}}</option>
-					<!--
-						<option value="Automotive">Automotive</option>
-						<option value="Real Estate">Real Estate</option>
-						<option value="Miscellaneous">Miscellaneous</option>
-					-->
-					</select>
-					{{main.productSelected}}
-				</div>
-
-				<div id="div-category">
-					<select name="category" id="category">
-						<option ng-repeat="category in main.productCategories" value="{{category.id}}">{{category.name}}</option>
-						<!--
-						<option value="newAuto">New Auto</option>
-						<option value="usedAuto">Used Auto</option>
-						<option value="motorcycles">Motorcycles</option>
-						-->
-					</select>
-				</div>
-			</section>
-
-		 	<div id="div-search-button">
-		 		<button ng-click="main.search()">Search!</button>
-		 	</div>
-		</form>
- 	</div>
-</div>
-
-
-<!--
-<div id="content">
-	<div id="search-content">
-	 	<h1>cDemo Live</h1>
-	 	<h3>{{main.description}}</h3>
-	 	<!--<a ui-sref="records">Records</a>--
-
-	 	<div id="content">
-	 		<form id="search-form" role="search">
-	 			<div>
-	 				<input id="search-input" type="search" placeholder="Enter Search" />
+	 	<div id="search-form">
+	 		<form role="search">
+	 			<div id="div-search-bar">
+	 			 	<input type="search" ng-model="main.searchTerm" placeholder="Enter Search" />
 	 			</div>
-	 		  	
-				<div>
-					<select name="product" id="product">
-						<option value="Automotive">Automotive</option>
-						<option value="Real Estate">Real Estate</option>
-						<option value="Miscellaneous">Miscellaneous</option>
-					</select>
-				</div>
-				<div>
-					<select name="category" id="category">
-						<option value="newAuto">New Auto</option>
-						<option value="usedAuto">Used Auto</option>
-						<option value="motorcycles">Motorcycles</option>
-					</select>
-				</div>
-				
-		 		<div>
-		 			<button id="search-button" ng-click="main.search()">Search!</button>
-		 		</div>
+	 			
+	 			<section>
+	 			 	<div id="div-product">
+	 					<select id="product" ng-model="main.productSelected">
+	 						<option ng-repeat="product in main.products" value="{{product.id}}">{{product.name}}</option>
+	 					</select>
+	 				</div>
+
+	 				<div id="div-category">
+	 					<select name="category" id="category">
+	 						<option ng-repeat="category in main.productCategories" value="{{category.id}}">{{category.name}}</option>
+	 					</select>
+	 				</div>
+	 			</section>
+
+	 		 	<div id="div-search-button">
+	 		 		<button ng-click="main.search()">Search</button>
+	 		 	</div>
 	 		</form>
 	 	</div>
-	 </div>
+ 	</div>
 </div>
-<!-- <input type="text" ng-model="main.searchTerm" /></div> -->
-<!-- <div>{{main.searchTerm}}</div> -->
-	<!-- <button type="submit">
- 	 	<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png" alt="Search Icon">
-	</button> -->
