@@ -1,0 +1,22 @@
+#pagination{
+	display:inline-block;
+	padding:0;
+	margin:0;
+	li{
+		display:inline;
+		a{
+			float:left;
+			text-decoration:none;
+			background:lightgrey;
+			padding:5px;
+			color: black;
+			border: solid 1px grey;
+		}
+		a:hover{
+			background:white;
+		}
+	}
+}
+div.center{
+	text-align: center;
+}
