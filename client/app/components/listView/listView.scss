@@ -1,0 +1,54 @@
+@import "../../bourbon/bourbon";
+@import "../../neat/neat";
+
+$desktop: new-breakpoint(min-width 700px); //this will activate on big screen
+
+section{
+	@include span-columns(12);
+	margin:auto;
+	width:100%;
+
+	background: tan;
+	border: 2px solid darken(tan,20%);
+	border-radius: 4px;
+
+	h2{
+		text-align: left;
+		padding: 10px;
+	}
+
+	img{
+		border-radius: 4px;
+		border: 2px solid darken(tan,20%);
+		max-height: 400px;
+		max-width: 350px;
+	}
+
+	div{
+		display:inline-block;
+	}
+}
+
+#title{
+	@include fill-parent();
+		@include media($desktop){
+			@include span-columns(8);
+		}
+}
+
+
+#image{
+	@include span-columns(8 of 8);
+		@include media($desktop){
+			@include span-columns(5 of 8);
+		}
+}
+
+#details{ 
+	@include fill-parent();
+		@include media($desktop){
+			@include span-columns(3 of 8);
+		}
+	text-align: left;
+	vertical-align: top;
+}

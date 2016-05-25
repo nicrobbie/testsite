@@ -27,7 +27,12 @@ import vdpDealer from './components/vdpDealer';
 import vdpImages from './components/vdpImages';
 import vdpInfo from './components/vdpInfo';
 import vdpSimilar from './components/vdpSimilar';
+
 import vdpReserve from './components/vdpReserve';
+
+import searchPanel from './components/searchPanel';
+import listView from './components/listView';
+
 
 
 //console.log(productService.getProducts());
@@ -37,7 +42,9 @@ import vdpReserve from './components/vdpReserve';
 //import sampleModule2 from './features/sample';
 //import testcomponent from './components/testcomponent';
 
-export default angular.module('testsite', [uirouter, footer, main, records, vdp, filterBank, pagination, gridView, vdpActions, vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, vdpReserve])
+
+export default angular.module('testsite', [uirouter, footer, main, records, vdp, filterBank, pagination, gridView, vdpActions,
+	vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, vdpReserve, searchPanel, listView])
 
   .config(config)
   .config(routes)

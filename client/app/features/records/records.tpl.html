@@ -2,15 +2,17 @@
 	<a ui-sref="records.state2">State 2</a>
     <ui-view></ui-view>
 </div> -->
-
-<div id="records-main">
-	<div id="search-info">
-	 	<h2>___ results found for _________, showing _ - _</h2>
-
-	 	<filter-bank></filter-bank>
-	 	<br><br>
-	 	<pagination></pagination>
-	 	<grid-view></grid-view>
-
- 	</div>
+<div id="wrapper">
+	<div id="records-main">
+		<div id="search-info">
+		 	<h2>___ results found for _________, showing _ - _</h2>
+			<search-panel></search-panel>
+		 	<filter-bank></filter-bank>
+		 	<br><br>
+		 	<pagination></pagination>
+		 	<grid-view></grid-view>
+		 	<pagination></pagination>
+			<list-view></list-view>
+	 	</div>
+	</div>
 </div>
