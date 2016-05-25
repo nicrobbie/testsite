@@ -1,8 +1,14 @@
+@import "../../bourbon/bourbon";
+@import "../../neat/neat";
+
+$desktop: new-breakpoint(min-width 700px);
+
 $bg-color: #156ABB;
 $a-color: #FFFFFF;
 
 
 .footer-content {
+	@include outer-container(100%);
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -11,15 +17,30 @@ $a-color: #FFFFFF;
 	background: $bg-color;
 	color: $a-color;
 	padding: 25px;
-
+	border-top: 1px solid white;
+	
 	#copyright {
-		width: 49%;
+		@include span-columns(12);
+
+		@include media($desktop) {
+			@include span-columns(6);
+		}
+		
+		padding: 10px;
+		width: 100%;
 		display: inline-block;
 		text-align: center;
 	}
 
 	#links {
-		width: 49%;
+		@include span-columns(12);
+
+		@include media($desktop) {
+			@include span-columns(6);
+		}
+		
+		padding: 10px;
+		width: 100%;
 		display: inline-block;
 		text-align: center;
 
