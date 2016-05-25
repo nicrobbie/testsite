@@ -4,16 +4,28 @@
 	 	<h1>cDemo Live</h1>
 	 	<h3>{{main.description}}</h3>
 	 	<!-- <a ui-sref="records">Records</a> -->
+<<<<<<< HEAD
+
+		<form id="search-form" role="search">
+			<div id="div-search-bar">
+			 	<input type="search" ng-model="main.searchTerm" placeholder="Enter Search" />
+			 	<!-- {{main.searchTerm}} -->
+=======
 		<form role="search">
 			<div id="div-search-bar">
 			 	<input type="search" ng-model="main.searchTerm" placeholder="Enter Search" />
 			 	{{main.searchTerm}}
+>>>>>>> origin/master
 			</div>
 			
 			<section>
 			 	<div id="div-product">
 					<select id="product" ng-model="main.productSelected">
 						<option ng-repeat="product in main.products" value="{{product.id}}">{{product.name}}</option>
+<<<<<<< HEAD
+					</select>
+					<!-- {{main.productSelected}} -->
+=======
 					<!--
 						<option value="Automotive">Automotive</option>
 						<option value="Real Estate">Real Estate</option>
@@ -21,28 +33,44 @@
 					-->
 					</select>
 					{{main.productSelected}}
+>>>>>>> origin/master
 				</div>
 
 				<div id="div-category">
 					<select name="category" id="category">
 						<option ng-repeat="category in main.productCategories" value="{{category.id}}">{{category.name}}</option>
+<<<<<<< HEAD
+=======
 						<!--
 						<option value="newAuto">New Auto</option>
 						<option value="usedAuto">Used Auto</option>
 						<option value="motorcycles">Motorcycles</option>
 						-->
+>>>>>>> origin/master
 					</select>
 				</div>
 			</section>
 
 		 	<div id="div-search-button">
+<<<<<<< HEAD
+		 		<button ng-click="main.search()">Search</button>
+=======
 		 		<button ng-click="main.search()">Search!</button>
+>>>>>>> origin/master
 		 	</div>
 		</form>
  	</div>
 </div>
 
 
+<<<<<<< HEAD
+
+
+
+
+
+=======
+>>>>>>> origin/master
 <!--
 <div id="content">
 	<div id="search-content">
