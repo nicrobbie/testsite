@@ -11,7 +11,7 @@ import run from './vdpReserve.run';
 
 import config from './vdpReserve.config';
 
-import $ from '../../../../bower_components/jquery/src/jquery.js';
+//import $ from '../../../../bower_components/jquery/src/jquery.js';
 
 
 export default angular.module("vdpReserve" , [])

@@ -1,17 +1,31 @@
+@import "../../bourbon/bourbon";
+@import "../../neat/neat";
+$desktop: new-breakpoint(min-width 1000px);
+
+
 #gridview-content {
+	@include outer-container(95%);
+	margin-right: auto;
+	margin-left: auto;
 	.hover-tile-outer {
-		
+		@include span-columns(12);
+
+		@include media($desktop) {
+			@include span-columns(3);
+    		@include omega(4n);
+		}
+		@media only screen and (min-width:700px) and (max-width: 1000px){
+			@include span-columns(5);
+			margin-left: 48px;
+		}
 		background: url("http://www.greencarlistings.com/wp-content/uploads/hybrid/Hondas.jpg");
-		background-position: top;
+
 		background-size: cover;
+		margin-bottom: 15px;
 
 
-		margin: 15px;
-		max-width: 400px;
-		max-height: 350px;
 		display: inline-block;
 		overflow:hidden;
-
 		border:1px solid #555;
 
 		.hover-tile-container {
