@@ -1,47 +1,49 @@
-.hover-tile-outer {
-	
-	background: url("http://www.greencarlistings.com/wp-content/uploads/hybrid/Hondas.jpg");
-	background-position: top;
-	background-size: cover;
+#gridview-content {
+	.hover-tile-outer {
+		
+		background: url("http://www.greencarlistings.com/wp-content/uploads/hybrid/Hondas.jpg");
+		background-position: top;
+		background-size: cover;
 
 
-	margin: 15px;
-	max-width: 400px;
-	max-height: 350px;
-	display: inline-block;
-	overflow:hidden;
+		margin: 15px;
+		max-width: 400px;
+		max-height: 350px;
+		display: inline-block;
+		overflow:hidden;
 
-	border:1px solid #555;
+		border:1px solid #555;
 
-	.hover-tile-container {
-		height: 350px;
-		position: relative;
-		bottom: 25px;
-	}
-
-	.hover-tile-container:hover > .hover-tile {
-		position: relative;
-		bottom: -25px;
-		transform: translate(0, -100%);
-	}
-
-	.hover-tile {
-		color: white;
-		height: inherit;
-		transition: all 0.3s ease-in-out;
-	}
-
-	.hover-tile-hidden {
-		background: transparentize(#000, 0.25);
-		//height: auto; makes it only come up to end of details
-		p {
-			text-align: left;
-			color: white;
-			line-height: 1.5em;
+		.hover-tile-container {
+			height: 350px;
+			position: relative;
+			bottom: 25px;
 		}
 
-		h4 {
-			margin: 0 0 0.5em 0;
+		.hover-tile-container:hover > .hover-tile {
+			position: relative;
+			bottom: -25px;
+			transform: translate(0, -100%);
+		}
+
+		.hover-tile {
+			color: white;
+			height: inherit;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.hover-tile-hidden {
+			background: transparentize(#000, 0.25);
+			//height: auto; makes it only come up to end of details
+			p {
+				text-align: left;
+				color: white;
+				line-height: 1.5em;
+			}
+
+			h4 {
+				margin: 0 0 0.5em 0;
+			}
 		}
 	}
 }

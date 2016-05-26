@@ -1,17 +1,19 @@
-var{
-	background: lighten(#15508c,25%);
-	border-radius: 4px;
-	padding: 7px;
-	color: white;
-	font: bold 14px serif;
-	border: solid 2px #15508c;
-	border-style: outset;
+#filter-bank {
+	var{
+		background: lighten(#15508c,25%);
+		border-radius: 4px;
+		padding: 7px;
+		color: white;
+		font: bold 14px serif;
+		border: solid 2px #15508c;
+		border-style: outset;
 
-}
-button{
-	font: bold 15px serif;
-	display:inline;
-	border-radius:50%;
-	color:lighten(#15508c,25%);
-	margin-right:3px;
+	}
+	button{
+		font: bold 15px serif;
+		display:inline;
+		border-radius:50%;
+		color:lighten(#15508c,25%);
+		margin-right:3px;
+	}
 }

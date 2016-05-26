@@ -3,7 +3,7 @@
 
 $desktop: new-breakpoint(min-width 700px); //this will activate on big screen
 
-section{
+#listview-content>section{
 	@include span-columns(12);
 	margin:auto;
 	width:100%;
