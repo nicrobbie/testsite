@@ -1,7 +1,79 @@
 <div id="actions-content">
-	<section>
-		<button class="action-button">Reserve</button>
+
+	<!-- Trigger/Open The Modal -->
+	<button id="myBtn" class="action-button" ng-click="vm.openModal()">Reserve</button>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-fade-screen">
+		  <div class="modal-content">
+		    <span class="close" ng-click="vm.closeModal()">x</span>
+		    <vdp-reserve></vdp-reserve>
+		  </div>
+	  </div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+	<div class="modal">
+		<label for="modal-1">
+			<span class="modal-trigger action-button" ng-click="vm.openModal(1)">Reserve</span>
+		</label>
+		<label for="modal-2">
+			<span class="modal-trigger action-button" ng-click="vm.openModal(2)">Trade In</span>
+		</label>
+		<label for="modal-3">
+			<span class="modal-trigger action-button" ng-click="vm.openModal(3)">Test Drive</span>
+		</label>
+		
+		<input class="modal-state" id="modal-1" type="checkbox" />
+		<div class="modal-fade-screen">
+			<div class="modal-inner mi1">
+				<div class="modal-close" for="modal-1" ng-click="vm.exitModal(1)"></div>
+				<vdp-reserve></vdp-reserve>
+			</div>
+		</div>
+
+		
+		<input class="modal-state" id="modal-2" type="checkbox" />
+		<div class="modal-fade-screen">
+			<div class="modal-inner mi2">
+				<div class="modal-close" for="modal-2" ng-click="vm.exitModal(2)"></div>
+				<vdp-reserve></vdp-reserve>
+			</div>
+		</div>
+	</div>
+-->
+	<!-- 
+<section>
+		
 		<button class="action-button">Trade In</button>
 		<button class="action-button">Test Drive</button>
 	</section>
+	 -->
+	
 </div>

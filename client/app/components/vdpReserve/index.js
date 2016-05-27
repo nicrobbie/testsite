@@ -3,6 +3,7 @@ import './vdpReserve.scss';
 
 
 import angular from 'angular';
+import angularDatePicker from 'angular-date-picker';
 
 // Import internal modules
 import controller from './vdpReserve.controller';
@@ -11,10 +12,8 @@ import run from './vdpReserve.run';
 
 import config from './vdpReserve.config';
 
-import $ from '../../../../bower_components/jquery/src/jquery.js';
 
-
-export default angular.module("vdpReserve" , [])
+export default angular.module("vdpReserve" , [angularDatePicker.name])
 .config(config)
 .run(run)
   .controller(controller.UID, controller)

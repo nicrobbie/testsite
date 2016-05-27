@@ -1,9 +1,45 @@
 <div id="vdp-reserve-content">
 	<form id="vdp-reserve-form">
-		<h2>Select a Date</h2>
-		
-		<h2>Select a Time</h2>
+		<div id="reserve-date">
+			<h2>Select a Date</h2>
+			<date-picker ng-model="reserve.date">
+			</date-picker>
+			<input type="hidden" ng-model="reserve.date">
+		</div>
 
-		<h2>Enter Your Info</h2>
+		<div id="reserve-time">
+			<h2>Select a Time</h2>
+			<select ng-model="reserve.hour" ng-options="h for h in vm.hours"></select>
+			<select ng-model="reserve.minute" ng-options="m for m in vm.minutes"></select>
+			<select ng-model="reserve.ampm" ng-options="a for a in vm.ampm"></select>
+		</div>
+
+		<div id="reserve-info">
+			<h2>Enter Your Info</h2>
+			<table>
+				<tr>
+					<td>First Name</td>
+					<td><input ng-model="reserve.firstName" type="text" name="reserveFirstName" placeholder="First name..." required></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input ng-model="reserve.lastName" type="text" name="reserveLastName" placeholder="Last name..." required></td>
+				</tr>
+				<tr>
+					<td>Phone</td>
+					<td><input ng-model="reserve.phone" type="text" name="reservePhone" placeholder="Phone number..." required></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input ng-model="reserve.email" type="text" name="reserveEmail" placeholder="Email..." required></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input ng-model="reserve.agree" type="checkbox" name="reserveAgree" required>
+						By providing my contact information i agree to be contacted by this business about their products and services. i understand i can withdraw this consent at any time
+					</td>
+				</tr>
+			</table>
+		</div>
 	</form>
 </div>
