@@ -3,7 +3,6 @@ import './app.scss';
 
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
-//import productService from './shared/productService';
 
 // Import base modules
 import config from './app.config';
@@ -33,14 +32,6 @@ import vdpReserve from './components/vdpReserve';
 import searchPanel from './components/searchPanel';
 import listView from './components/listView';
 
-
-
-//console.log(productService.getProducts());
-
-// Import internal modules
-//import sampleModule from './features/sample2';
-//import sampleModule2 from './features/sample';
-//import testcomponent from './components/testcomponent';
 
 
 export default angular.module('testsite', [uirouter, footer, main, records, vdp, filterBank, pagination, gridView, vdpActions,
