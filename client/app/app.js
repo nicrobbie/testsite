@@ -27,7 +27,6 @@ import vdpImages from './components/vdpImages';
 import vdpInfo from './components/vdpInfo';
 import vdpSimilar from './components/vdpSimilar';
 
-import vdpReserve from './components/vdpReserve';
 
 import searchPanel from './components/searchPanel';
 import listView from './components/listView';
@@ -35,7 +34,7 @@ import listView from './components/listView';
 
 
 export default angular.module('testsite', [uirouter, footer, main, records, vdp, filterBank, pagination, gridView, vdpActions,
-	vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, vdpReserve, searchPanel, listView])
+	vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, searchPanel, listView])
 
   .config(config)
   .config(routes)
