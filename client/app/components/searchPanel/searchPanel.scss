@@ -1,0 +1,40 @@
+search-panel{
+    .modal-fade-screen {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 25%; /* Full width */
+        height: 100%; /* Full height */    
+        background-color: #156ABB;
+        color:white;
+        overflow: auto;
+        
+        .options{
+        }
+        
+        .buttons{
+            position:fixed;
+            bottom:0;
+            margin:auto;
+            padding: 5px;
+            width: 25%;
+            height:5%;
+            background-color: #156ABB;
+        }
+    }
+
+
+}
