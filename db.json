@@ -26,5 +26,12 @@
 			"id": 3,
 			"name": "Misc"
 		}
+	],
+
+	"records": [
+		{
+			"id": 1,
+			"title": "lkj"
+		}
 	]
 }

@@ -56,6 +56,8 @@ module.exports = function(ENV) {
       // Reference: http://webpack.github.io/docs/list-of-plugins.html#dedupeplugin
       // Dedupe modules in the output
       new webpack.optimize.DedupePlugin()
+
+
     ]
   }
 }
