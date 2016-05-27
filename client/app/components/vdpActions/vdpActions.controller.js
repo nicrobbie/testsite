@@ -8,32 +8,13 @@ export default class vdpActionsController {
     this.title = "I am a vdpActions component"
   }
 
-  openModal() {
-  	var modal = document.getElementById("myModal");
+  openModal(num) {
+  	var modal = document.getElementById("modal" + num);
   	modal.style.display = "block";
   }
 
-  closeModal() {
-  	var modal = document.getElementById("myModal");
+  closeModal(num) {
+  	var modal = document.getElementById("modal" + num);
   	modal.style.display = "none";
   }
-/*
-  openModal(num) {
-  	var modal = document.getElementsByClassName("mi" + num);
-  	modal[0].style.display = "block";
-  	modal = document.getElementsByClassName("modal-fade-screen");
-  	modal[0].style.display = "block";
-  	console.log("open");
-  }
-
-  exitModal(num) {
-  	var modal = document.getElementsByClassName("mi" + num);
-  	modal[0].style.display = "none";
-  	modal = document.getElementsByClassName("modal-fade-screen");
-  	for(var i = 0; i < modal.length; i++) {
-  		modal[i].style.display = "none";
-  	}
-  	console.log("exit");
-  }
-*/
 }

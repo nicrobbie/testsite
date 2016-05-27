@@ -1,12 +1,48 @@
 <div id="actions-content">
 
 	<!-- Trigger/Open The Modal -->
-	<button id="myBtn" class="action-button" ng-click="vm.openModal()">Reserve</button>
+	<section>
+		<button class="action-button" ng-click="vm.openModal(1)">Reserve</button>
+		<button class="action-button" ng-click="vm.openModal(2)">Trade In</button>
+		<button class="action-button" ng-click="vm.openModal(3)">Test Drive</button>
+	</section>
 
-	<!-- The Modal -->
+	<!-- Reserve -->
+	<div id="modal1" class="modal">
+	  <div class="modal-fade-screen">
+		  <div class="modal-content">
+		    <span class="close" ng-click="vm.closeModal(1)">x</span>
+		    <vdp-reserve></vdp-reserve>
+		  </div>
+	  </div>
+	</div>
+
+	<!-- Trade In -->
+	<div id="modal2" class="modal">
+	  <div class="modal-fade-screen">
+		  <div class="modal-content">
+		    <span class="close" ng-click="vm.closeModal(2)">x</span>
+		    <vdp-tradein></vdp-tradein>
+		  </div>
+	  </div>
+	</div>
+
+	<!-- Test Drive -->
+	<div id="modal3" class="modal">
+	  <div class="modal-fade-screen">
+		  <div class="modal-content">
+		    <span class="close" ng-click="vm.closeModal(3)">x</span>
+		    <vdp-testdrive></vdp-testdrive>
+		  </div>
+	  </div>
+	</div>
+
+
+<!-- THIS WORKS DON'T TOUCH IT
+	<!-- The Modal --
 	<div id="myModal" class="modal">
 
-	  <!-- Modal content -->
+	  <!-- Modal content --
 	  <div class="modal-fade-screen">
 		  <div class="modal-content">
 		    <span class="close" ng-click="vm.closeModal()">x</span>
@@ -14,7 +50,7 @@
 		  </div>
 	  </div>
 	</div>
-
+-->
 
 
 
