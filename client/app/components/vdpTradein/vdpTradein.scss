@@ -1,0 +1,70 @@
+@import "../../bourbon/bourbon";
+@import "../../neat/neat";
+
+$desktop: new-breakpoint(min-width 700px);
+
+#vdp-tradein-content {
+	$base-spacing: 1.5em !default;
+	$base-border-color: gainsboro !default;
+	$base-line-height: 1.5em !default;
+
+	$search-bar-border-color: $base-border-color;
+	$search-bar-border: 1px solid $search-bar-border-color;
+	$search-bar-background: lighten($search-bar-border-color, 10%);
+
+
+	#vdp-tradein-form {
+		@include outer-container(100%);
+	}
+
+	#tradein-vehicle-info {
+		@include span-columns(12);
+
+		@include media($desktop) {
+			@include span-columns(6);
+		}
+	}
+
+	#tradein-info {
+		@include span-columns(12);
+
+		@include media($desktop) {
+			@include span-columns(6);
+		}
+	}
+	
+	h1 {
+		@include span-columns(12);
+		padding: 0;
+		margin: 10px;
+	}
+
+	td {
+		padding: 10px;
+		text-align: left;
+	}
+
+	input {
+		width: 100%;
+		appearance: none;
+		background-color: white;
+		border: 1px solid $base-border-color;
+		box-sizing: border-box;
+		font-size: 1em;
+		padding: ($base-spacing / 3) ($base-spacing / 3);
+	}
+
+	input[type=radio] {
+		width: auto;
+	}
+
+	select {
+		width: 100%;
+		appearance: none;
+		background-color: white;
+		border: 1px solid $base-border-color;
+		box-sizing: border-box;
+		font-size: 1em;
+		padding: ($base-spacing / 3) ($base-spacing / 3);
+	}
+}
