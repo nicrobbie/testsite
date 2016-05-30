@@ -21,7 +21,6 @@ export default angular.module("main" , [uirouter])
   		return $http.get("http://localhost:3004/products");
   	};
   	this.getProductCategories = function (id) {
-  		//return $http.get("http://localhost:3004/products/" + id);
   		return $http.get(`http://localhost:3004/products/${id}`);
   	}
   })

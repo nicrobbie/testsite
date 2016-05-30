@@ -4,6 +4,7 @@ import './vdpInfo.scss';
 
 import angular from 'angular';
 
+
 // Import internal modules
 import controller from './vdpInfo.controller';
 import directive from './vdpInfo.directive';
