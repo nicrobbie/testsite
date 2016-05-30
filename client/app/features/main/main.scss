@@ -15,10 +15,6 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 
 
 
-
-
-
-
 #content {
 	width: 100%;
 	background: url("../../../assets/images/cDemoLiveHomeBG.jpg");
@@ -50,6 +46,16 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 		margin-right: auto;
 		@include media($desktop) {
 			width: 65%;
+		}
+
+		select {
+			appearance: none;
+			background-color: white;
+			border: 1px solid $base-border-color;
+			box-sizing: border-box;
+			font-size: 1em;
+			padding: ($base-spacing / 3) ($base-spacing / 3);
+			width: 100%;
 		}
 	}
 }
@@ -83,13 +89,7 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 	padding-top: 10px;
 
 	#product {
-		appearance: none;
-		background-color: white;
-		border: 1px solid $base-border-color;
-		box-sizing: border-box;
-		font-size: 1em;
-		padding: ($base-spacing / 3) ($base-spacing / 3);
-		width: 100%;
+		
 	}
 }
 
@@ -104,13 +104,6 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 	padding-top: 10px;
 
 	#category {
-		appearance: none;
-		background-color: white;
-		border: 1px solid $base-border-color;
-		box-sizing: border-box;
-		font-size: 1em;
-		padding: ($base-spacing / 3) ($base-spacing / 3);
-		width: 100%;
 	}
 }
 
@@ -155,87 +148,3 @@ $search-bar-background: lighten($search-bar-border-color, 10%);
 		@include background-image(linear-gradient(darken($btn-bg-end, 10%), darken($btn-bg-start, 10%)));
 	}
 }
-
-/*
-	#search-input {
-		//@include fill-parent;
-		@include span-columns(10);
-		@include shift(1);
-	}
-
-
-	#search-button {
-		@include span-columns(6);
-		@include shift(3);
-
-
-		background-color: #53aee0;
-	    background-image: -webkit-linear-gradient(#53aee0,#289ad8);
-	    background-image: linear-gradient(#53aee0,#289ad8);
-	    border: 1px solid #185d82;
-	    color: #FFF;
-	    margin-bottom: 10px;
-	    margin-top: 10px;
-	    text-shadow: 0px -1px #185d82;
-		border-radius: 5px;
-		box-shadow: inset 0px 1px rgba(255,255,255,0.4);
-		//font-size: 1em;
-		//font-weight: 200;
-		letter-spacing: 2px;
-		padding: 15px 0;
-		text-align: center;
-		text-transform: uppercase;
-	}
-
-	#search-button:hover {
-		background-color: lighten(#53aee0, 10%);
-		background-image: -webkit-linear-gradient(lighten(#53aee0, 10%), lighten(#289ad8, 10%));
-	    background-image: linear-gradient(lighten(#53aee0, 10%), lighten(#289ad8, 10%));
-	}
-
-	#product {
-		@include shift(1);
-	}
-
-	#category {
-		//@include shift(1);
-	}
-	#product, #category {
-		@include span-columns(5);
-		//@include shift(2);
-		$base-spacing: 1.5em !default;
-		$base-border-color: gainsboro !default;
-		$base-line-height: 1.5em !default;
-
-		$search-bar-border-color: $base-border-color;
-		$search-bar-border: 1px solid $search-bar-border-color;
-		$search-bar-background: lighten($search-bar-border-color, 10%);
-		
-		appearance: none;
-		background-color: white;
-		border: 1px solid $base-border-color;
-		box-sizing: border-box;
-		font-size: 1em;
-		padding: ($base-spacing / 3) ($base-spacing / 3);
-
-		
-		//margin: 10px;
-//		//max-width: 40%;
-//		//max-width: 400px;
-//		//padding-left: 10px;
-//		//padding-right: 10px;
-//		//margin-left: auto;
-//		//margin-right: auto;
-		//position: relative;
-		
-//		display: inline-block;
-//		font-size: 1em;
-//		//font-style: italic;
-//		margin: 0;
-		
-//		//position: relative;
-//		transition: border-color;
-	}
-}
-
-*/
