@@ -1,17 +1,7 @@
-@import "../../bourbon/bourbon";
-@import "../../neat/neat";
+@import "../../shared/variables.scss";
 
-$desktop: new-breakpoint(min-width 700px);
 
 #vdp-tradein-content {
-	$base-spacing: 1.5em !default;
-	$base-border-color: gainsboro !default;
-	$base-line-height: 1.5em !default;
-
-	$search-bar-border-color: $base-border-color;
-	$search-bar-border: 1px solid $search-bar-border-color;
-	$search-bar-background: lighten($search-bar-border-color, 10%);
-
 
 	#vdp-tradein-form {
 		@include outer-container(100%);
@@ -45,13 +35,7 @@ $desktop: new-breakpoint(min-width 700px);
 	}
 
 	input {
-		width: 100%;
-		appearance: none;
-		background-color: white;
-		border: 1px solid $base-border-color;
-		box-sizing: border-box;
-		font-size: 1em;
-		padding: ($base-spacing / 3) ($base-spacing / 3);
+		@include default-input();
 	}
 
 	input[type=radio] {
@@ -59,12 +43,7 @@ $desktop: new-breakpoint(min-width 700px);
 	}
 
 	select {
+		@include default-select();
 		width: 100%;
-		appearance: none;
-		background-color: white;
-		border: 1px solid $base-border-color;
-		box-sizing: border-box;
-		font-size: 1em;
-		padding: ($base-spacing / 3) ($base-spacing / 3);
 	}
 }
