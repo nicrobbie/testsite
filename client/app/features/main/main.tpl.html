@@ -3,7 +3,7 @@
 	<div id="search-content">
 		<div id="search-titles">
 		 	<h1>cDemo Live</h1>
-		 	<h3>{{main.description}}</h3>
+		 	<h3>{{::main.description}}</h3>
 	 	</div>
 	 	<!-- <a ui-sref="records">Records</a> -->
 	 	<div id="search-form">
@@ -14,14 +14,15 @@
 	 			
 	 			<section>
 	 			 	<div id="div-product">
-	 					<select id="product" ng-model="main.productSelected">
-	 						<option ng-repeat="product in main.products" value="{{product.id}}">{{product.name}}</option>
-	 					</select>
+				
+	 			 		<select id="product" ng-model="main.productSelected" ng-options="p.name for p in main.products"></select>
+						<!--{{main.productSelected}}-->
+	 					
 	 				</div>
 
 	 				<div id="div-category">
-	 					<select name="category" id="category">
-	 						<option ng-repeat="category in main.productCategories" value="{{category.id}}">{{category.name}}</option>
+	 					<select id="product" ng-show="main.productSelected" ng-model="main.productCategorySelected" ng-options="c.name for c in main.productSelected.categories">
+	 						<option value="">All</option>
 	 					</select>
 	 				</div>
 	 			</section>

@@ -6,47 +6,47 @@
 				<table>
 					<tr>
 						<td>Price</td>
-						<td>{{vm.price}}</td>
+						<td>{{vm.record.price | currency}}</td>
 					</tr>
 					<tr>
 						<td>Make</td>
-						<td>{{vm.make}}</td>
+						<td>{{vm.record.make}}</td>
 					</tr>
 					<tr>
 						<td>Model</td>
-						<td>{{vm.model}}</td>
+						<td>{{vm.record.model}}</td>
 					</tr>
 					<tr>
 						<td>Year</td>
-						<td>{{vm.year}}</td>
+						<td>{{vm.record.year}}</td>
 					</tr>
 					<tr>
 						<td>Odometer</td>
-						<td>{{vm.odometer}}</td>
+						<td>{{vm.record.odemeter | number}}</td>
 					</tr>
 					<tr>
 						<td>Transmission</td>
-						<td>{{vm.transmission}}</td>
+						<td>{{vm.record.transmission}}</td>
 					</tr>
 					<tr>
 						<td>Drivetrain</td>
-						<td>{{vm.drivetrain}}</td>
+						<td>{{vm.record.drivetrain}}</td>
 					</tr>
 					<tr>
 						<td>Exterior</td>
-						<td>{{vm.exterior}}</td>
+						<td>{{vm.record.exterior}}</td>
 					</tr>
 					<tr>
 						<td>Interior</td>
-						<td>{{vm.interior}}</td>
+						<td>{{vm.record.interior}}</td>
 					</tr>
 					<tr>
 						<td>Vin</td>
-						<td>{{vm.vin}}</td>
+						<td>{{vm.record.vin}}</td>
 					</tr>
 					<tr>
 						<td>Stock #</td>
-						<td>{{vm.stocknum}}</td>
+						<td>{{vm.record.stock_number}}</td>
 					</tr>
 				</table>
 			</div>
@@ -54,8 +54,9 @@
 		<li class="tab-header-and-content" ng-click="vm.tabClick(2)">
 			<a href="javascript:void(0)" id="tab-2" class="tab-link">Features</a>
 			<div class="tab-content" id="tab-2-content">
+				<input type="search" ng-model="feature.search" placeholder="Search features" />
 				<ul id="feature-list">
-					<li ng-repeat="feature in vm.features">
+					<li ng-repeat="feature in vm.record.feature | filter : feature.search">
 						{{feature}}
 					</li>
 				</ul>

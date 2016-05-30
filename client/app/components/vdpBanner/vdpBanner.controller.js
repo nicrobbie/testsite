@@ -5,6 +5,6 @@ export default class vdpBannerController {
 
   /* @ngInject */
   constructor() {
-    this.title = "I am a vdpBanner component"
+    this.dealerHomePage = "www.homepage.com";
   }
 }
