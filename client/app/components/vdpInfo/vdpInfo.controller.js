@@ -1,10 +1,19 @@
-export default class vdpInfoController {
+class vdpInfoController {
   static get UID(){
     return "vdpInfoController"
   }
 
   /* @ngInject */
-  constructor($scope) {
+  constructor($scope, InfoService) {
+
+    this.recordId = 625165;
+    this.record = {};
+    InfoService.getInfo(this.recordId).then( (response) => { 
+      this.record = response.data[0]; 
+      console.log(this.record);
+    });
+
+    /*
     this.price = "$57,345.00";
     this.make = "Toyota";
     this.model = "Tundra";
@@ -64,7 +73,7 @@ export default class vdpInfoController {
     this.hybridNote = "Applies to hybrid vehicles only";
     this.roadsideYears = "5";
     this.roadsideMiles = "100,000";
-
+    */
     document.getElementById("tab-1-content").style.display = "block";
   }
 
@@ -90,3 +99,6 @@ export default class vdpInfoController {
     //evt.currentTarget.className += " is-active";
   }
 }
+
+vdpInfoController.$inject = ['$scope', 'InfoService'];
+export default vdpInfoController;
