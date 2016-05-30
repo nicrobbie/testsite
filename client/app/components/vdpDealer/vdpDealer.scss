@@ -50,6 +50,14 @@ $desktop: new-breakpoint(min-width 700px);
 		li {
 			padding: 10px;
 		}
+
+		a {
+			color: gray;
+		}
+
+		a:hover {
+			color: black;
+		}
 	}
 
 
