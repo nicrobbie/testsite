@@ -14,14 +14,13 @@ import run from './main.run';
 
 
 export default angular.module("main" , [uirouter])
-.config(routes)
-.run(run)
+  .config(routes)
+  .run(run)
   .service('ProductService', function ($http) {
   	this.getProducts = function () {
   		return $http.get("http://localhost:3004/products");
   	};
   	this.getProductCategories = function (id) {
-  		//return $http.get("http://localhost:3004/products/" + id);
   		return $http.get(`http://localhost:3004/products/${id}`);
   	}
   })

@@ -31,7 +31,37 @@
 	"records": [
 		{
 			"id": 1,
-			"title": "lkj"
+			"title": "2017 Toyota Tundra 4WD",
+			"price": 57345,
+			"make": "Toyota",
+			"model": "Tundra",
+			"year": 2016,
+			"odometer": 15000,
+			"transmission": "6-speed A/T",
+			"drivetrain": "Four Wheel Drive",
+			"exterior": "Black",
+			"interior": "",
+			"vin": "5TFAY5F19GX552575",
+			"stocknum": "TR2718",
+			"basicyearsrs": "3",
+			"basicMiles": "60,000",
+			"drivetrainYears": "5",
+			"drivetrainMiles": "100,000",
+			"corrosionYears": "5",
+			"corrosionMiles": "Unlimited",
+			"hybridYears": "8",
+			"hybridMiles": "160,000",
+			"hybridNote": "Applies to hybrid vehicles only",
+			"roadsideYears": "5",
+			"roadsideMiles": "100,000",
+			"photos": [
+				{
+					"id": 1,
+					"url": "url/id/",
+					"seo_alt":  "",
+					"seo_title": ""
+				}
+			]
 		}
 	]
 }

@@ -16,8 +16,15 @@ import vdpTradein from '../../components/vdpTradein';
 import vdpTestdrive from '../../components/vdpTestdrive';
 
 export default angular.module("vdp" , [uirouter, vdpReserve, vdpTradein, vdpTestdrive])
-.config(config)
+  .config(config)
   .config(routes)
-.run(run)
+  .run(run)
+  .service('InfoService', function ($http, $q) {
+
+  	this.getInfo = function (id) {
+  		return $http.jsonp(`http://live-uat.cdemo.com/jsonp/detail/${id}?callback=JSON_CALLBACK`);
+  	};
+
+  })
   .controller(controller.UID, controller)
   .name;

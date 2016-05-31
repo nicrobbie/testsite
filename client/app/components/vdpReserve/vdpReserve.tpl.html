@@ -5,16 +5,16 @@
 		<section>
 			<div id="reserve-date">
 				<h2>Select a Date</h2>
-				<date-picker ng-model="reserve.date">
-				</date-picker>
-				<input type="hidden" ng-model="reserve.date">
+				<date-picker ng-model="reserve.date" format-date="vm.formatDate" parse-date="vm.parseDate" ng-init="reserve.date = vm.date">
+				</date-picker></br>
+				<input type="text" ng-model="reserve.date" ng-disabled="true">
 			</div>
 
 			<div id="reserve-time">
 				<h2>Select a Time</h2>
-				<select ng-model="reserve.hour" ng-options="h for h in vm.hours"></select>
-				<select ng-model="reserve.minute" ng-options="m for m in vm.minutes"></select>
-				<select ng-model="reserve.ampm" ng-options="a for a in vm.ampm"></select>
+				<select ng-model="reserve.hour" ng-init="reserve.hour = vm.hour" ng-options="h for h in vm.hours"></select>
+				<select ng-model="reserve.minute" ng-init="reserve.minute = vm.minute" ng-options="m for m in vm.minutes"></select>
+				<select ng-model="reserve.ampm" ng-init="reserve.ampm = vm.ampm[1]" ng-options="a for a in vm.ampm"></select>
 			</div>
 
 			<div id="reserve-info">
@@ -47,7 +47,7 @@
 		</section>
 		
 		<section>
-			<button class="action-button" ng-click="vm.openModal(1)">Submit</button>
+			<button class="action-button">Submit</button>
 		</section>
 	</form>
 </div>

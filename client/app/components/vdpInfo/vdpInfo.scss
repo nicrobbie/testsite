@@ -1,8 +1,4 @@
-@import "../../bourbon/bourbon";
-@import "../../neat/neat";
-
-$desktop: new-breakpoint(min-width 700px);
-
+@import "../../shared/variables.scss";
 
 
 #info-content {
@@ -27,9 +23,13 @@ $desktop: new-breakpoint(min-width 700px);
     tr:last-child {
         border-bottom: none;
     }
+
+    input {
+        @include default-input();
+    }
 }
 
-
+    
 #feature-list {
 
     li {
