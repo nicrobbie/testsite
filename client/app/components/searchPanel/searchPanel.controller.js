@@ -12,7 +12,7 @@ export default class searchPanelController {
   	var modal = document.getElementById("myModal");
   	modal.style.display = "block";
   	var content = document.getElementById("myContent");
-  	content.style.display = "block";
+    content.style.display = "block";
   }
 
   closeModal() {
@@ -21,4 +21,5 @@ export default class searchPanelController {
   	var content = document.getElementById("myContent");
   	content.style.display = "none";
   }
+
 }

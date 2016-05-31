@@ -1,3 +1,8 @@
+@import "../../bourbon/bourbon";
+@import "../../neat/neat";
+$desktop: new-breakpoint(min-width 1000px);
+$cdemo: #156abb;
+
 search-panel{
     .modal-fade-screen {
         display: none;
@@ -5,34 +10,85 @@ search-panel{
         z-index: 1;
         left: 0;
         top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.85);
     }
     .modal {
         display: none;
         position: fixed;
-        z-index: 1;
+        z-index: 2;
         left: 0;
         top: 0;
-        width: 25%; /* Full width */
-        height: 100%; /* Full height */    
-        background-color: #156ABB;
-        color:white;
+        height:100%;
+        width: 100%;
+        @include media($desktop) {
+            width:25%;
+        }    
+        color:$cdemo;
         overflow: auto;
+        background: #CCC;
+        box-shadow: 0px 0px 54px 26px rgba(0,0,0,0.9);
         
         .options{
+            position:fixed;
+            z-index: 1;
+            top:0;
+            left:0;
+
+            padding-bottom: 10px;
+            overflow: auto;
+            height:95%;
+            width: 100%;
+            @include media($desktop) {
+                width:25%;
+            }   
+            hr{
+                width:90%;
+            }
         }
-        
         .buttons{
             position:fixed;
+            z-index: 1;
             bottom:0;
+            left:0;
             margin:auto;
-            padding: 5px;
-            width: 25%;
+
+            width: 100%;
+            @include media($desktop) {
+                width:25%;
+            }
+            //padding-top:1%;
             height:5%;
-            background-color: #156ABB;
+            border-top: 1px solid #888;
+            border-right: 1px solid #888;
+            border-bottom: 1px solid #888;
+            background-color: lighten($cdemo, 10%);
+            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.9);
+            
+            button{
+                border: 1px solid darken($cdemo, 25%);
+                color: #000;
+                font-weight: bold;
+                text-shadow: 1px 1px #888;
+                border-radius: 2px;
+                box-shadow: inset 0px 1px rgba(255,255,255,0.4);
+                letter-spacing: 2px;
+                text-align: center;
+                margin-top:5px;
+
+            }
+            #reset{
+                background-color:#D44;
+                width: 33%;
+                height:80%;
+            }
+            #submit{
+                background-color: #4f4;
+                width: 33%;
+                height:80%;
+            }
         }
     }
 

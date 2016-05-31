@@ -1,18 +1,13 @@
 <div id="search-panel">
-
 	<!-- Trigger/Open The Modal -->
-	<button id="myBtn" class="action-button" ng-click="vm.openModal()">Reserve</button>
-
+	<button id="searchBtn" class="action-button" ng-click="vm.openModal()">🔍 </button>
 	<!-- The Modal fade-->
 	<div id="myModal" class="modal-fade-screen" ng-click="vm.closeModal()"></div>
 	<!-- Modal content -->
 	<div id="myContent" class="modal">
-		<span class="close" ng-click="vm.closeModal()">x &nbsp</span>
-		
 		<form action="search">
-			<legend>Search Options:</legend>
-				<div class="options">
-				<br><br>
+			<div class="options">
+				<span class="close" ng-click="vm.closeModal()">X &nbsp</span>
 			  	<h3>Search Term</h3>
 			  	<input type="text" name="term"></input>
 			  	<hr>
@@ -26,16 +21,13 @@
 			  	<input type="select"></input>
 			  	<hr>
 			  	<h3>Price (slider)</h3>
-			  	<input type="number"></input>
-			  	<input type="number"></input>
+			  	<input type="range"></input>
 			  	<hr>
 			  	<h3>Kilometers(slider)</h3>
-			  	<input type="number"></input>
-			  	<input type="number"></input>
+			  	<input type="range"></input>
 			  	<hr>
 			  	<h3>Year (slider)</h3>
-			  	<input type="number"></input>
-			  	<input type="number"></input>
+			  	<input type="range"></input>
 			  	<hr>
 			  	<h3>Transmission</h3>
 			  	<input type="select"></input>
@@ -45,14 +37,17 @@
 				<hr>
 				<h3>Trim</h3>
 				<input type="select"></input>
-				<hr><br><br>
+				<hr>
+				<h3>Trim</h3>
+				<input type="select"></input>
+				<hr>
+				<h3>Trim</h3>
+				<input type="select"></input>
 			</div>
 			<div class="buttons">
-				<input type="reset"></input>
-				<input type="submit"></input>
+				<button type="reset" id="reset">Reset</button>
+				<button type="submit" id="submit">Submit</button>
 			</div>
 		</form>
-
 	</div>
-
 </div>

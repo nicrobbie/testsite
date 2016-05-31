@@ -1,7 +1,8 @@
+$cdemo: #156abb;
 #filter-bank {
 	.button {
 		font: italic small-caps normal 13px/150% terminal;
-	    background-color: #156ABB;
+	    background-color: $cdemo;
 	    background-image: linear-gradient(top, #eee, #ccc);
 	    border: 1px solid #CCC;
 	    padding: 0.2em 1.5em 0.5em;
