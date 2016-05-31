@@ -52,14 +52,17 @@ $btn-bg-end: #289AD8;
 	font-family: "Century Gothic", sans;
 }
 
+
 @mixin default-button-hover() {
 	@include background-image(linear-gradient(darken($btn-bg-start, 10%), darken($btn-bg-end, 10%)));
 	cursor: pointer;
 }
 
+
 @mixin default-button-active() {
 	@include background-image(linear-gradient(darken($btn-bg-end, 10%), darken($btn-bg-start, 10%)));
 }
+
 
 @mixin default-select() {
 	appearance: none;
