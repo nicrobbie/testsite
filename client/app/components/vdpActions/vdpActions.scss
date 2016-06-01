@@ -50,10 +50,14 @@
         width: 100%;
     }
 
-    
+    .ng-show {
+        //height: 0;
+        //top:100050px;
+    }
+
     .ng-hide {
-        height: 0;
-        top:50px;
+        //height: 0;
+        top: 50px;
     }
 }
 
