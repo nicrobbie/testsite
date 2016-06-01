@@ -4,6 +4,7 @@ import './main.scss';
 
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
+
 //import productService from '../../shared/productService';
 
 // Import internal modules
