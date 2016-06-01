@@ -2,12 +2,29 @@
 
 	<!-- Trigger/Open The Modal -->
 	<section>
-		<button class="action-button" ng-click="vm.openModal(1)">Reserve</button>
-		<button class="action-button" ng-click="vm.openModal(2)">Trade In</button>
-		<button class="action-button" ng-click="vm.openModal(3)">Test Drive</button>
+		<button class="action-button" ng-click="vm.toggleContent(1)">Reserve</button>
+		<button class="action-button" ng-click="vm.toggleContent(2)">Trade In</button>
+		<button class="action-button" ng-click="vm.toggleContent(3)">Test Drive</button>
 	</section>
 
+
 	<!-- Reserve -->
+	<div class="action-area" id="action1" ng-show="vm.reserveShow">
+		<vdp-reserve></vdp-reserve>
+	</div>
+
+	<!-- Trade In -->
+	<div class="action-area" id="action1" ng-show="vm.tradeShow">
+		<vdp-tradein></vdp-tradein>
+	</div>
+
+	<!-- Test Drive -->
+	<div class="action-area" id="action2" ng-show="vm.testShow">
+		<vdp-testdrive></vdp-testdrive>
+	</div>
+</div>
+
+	<!-- Reserve --
 	<div id="modal1" class="modal">
 	  <div class="modal-fade-screen">
 		  <div class="modal-content">
@@ -17,7 +34,7 @@
 	  </div>
 	</div>
 
-	<!-- Trade In -->
+	<!-- Trade In --
 	<div id="modal2" class="modal">
 	  <div class="modal-fade-screen">
 		  <div class="modal-content">
@@ -27,7 +44,7 @@
 	  </div>
 	</div>
 
-	<!-- Test Drive -->
+	<!-- Test Drive --
 	<div id="modal3" class="modal">
 	  <div class="modal-fade-screen">
 		  <div class="modal-content">
@@ -112,4 +129,4 @@
 	</section>
 	 -->
 	
-</div>
+
