@@ -13,8 +13,13 @@ import config from './vdpDealer.config';
 
 
 export default angular.module("vdpDealer" , [])
-.config(config)
-.run(run)
+  .config(config)
+  .run(run)
+  .service('InfoService', function ($http, $q) {
+  	this.getInfo = function (id) {
+  		return $http.jsonp(`http://live-uat.cdemo.com/jsonp/detail/${id}?callback=JSON_CALLBACK`);
+  	};
+  })
   .controller(controller.UID, controller)
   .directive("vdpDealer", directive)
   .name;

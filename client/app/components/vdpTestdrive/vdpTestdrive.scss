@@ -39,7 +39,6 @@
 
 	#testdrive-info {
 		@include span-columns(12);
-		margin-top: 20px;
 
 		@include media($desktop) {
 			@include span-columns(4);

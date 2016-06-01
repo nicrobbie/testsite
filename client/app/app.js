@@ -3,6 +3,7 @@ import './app.scss';
 
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
+import ngAnimate from 'angular-animate';
 
 // Import base modules
 import config from './app.config';
@@ -33,7 +34,7 @@ import listView from './components/listView';
 
 
 
-export default angular.module('testsite', [uirouter, footer, main, records, vdp, filterBank, pagination, gridView, vdpActions,
+export default angular.module('testsite', [uirouter, ngAnimate, footer, main, records, vdp, filterBank, pagination, gridView, vdpActions,
 	vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, searchPanel, listView])
 
   .config(config)
