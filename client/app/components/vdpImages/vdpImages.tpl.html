@@ -1,4 +1,24 @@
 <div id="images-content">
 	<h1 style="margin-top: 10px">{{vm.record.title}}</h1>
- 	<img src="{{vm.record.primary_photo}}">
+ 	
+ 	
+ 	<div id="slideshow">
+ 		<span ng-repeat="media in vm.pictures">
+ 			<img class="mySlides" style="display: none;" alt="{{media.seo_alt}}" title="{{media.seo_title}}" ng-src="http://static.cdemo.com/625165/1024/{{media.photo_name}}" ng-click="vm.showImage()">
+ 		</span>
+ 	</div>
+	
+	
+	<div id="slideshow-buttons">
+		<button class="slideshow-button" ng-click="vm.plusDivs(-1)">❮ Prev</button>
+	   	<button class="slideshow-button" ng-click="vm.plusDivs(1)">Next ❯</button>
+	</div>
+
+
+	<div id="image-modal" class="img-modal" onclick="this.style.display='none'">
+		<span class="close-button w3-hover-red w3-text-white">&times;</span>
+		<div class="image-modal-content image-animate-zoom">
+			<img id="image-content" style="width:100%">
+		</div>
+	</div>
 </div>
