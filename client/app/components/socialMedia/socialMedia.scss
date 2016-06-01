@@ -1,0 +1,87 @@
+#socialMedia-content {
+	
+	float: right;
+	margin: 15px;
+
+	span {
+		padding: 3px;
+		border-radius: 5px;
+		color: white;
+	}
+
+	i {
+		margin: 4px;
+	}
+
+	#pinterest {
+		i {
+			position: relative;
+		    top: 2px;
+		    display: inline-block;
+		    width: 40px;
+		    height: 14px;
+		    background: transparent 0 0 no-repeat;
+		    background-image: url("../../../assets/images/pinit.svg");
+		}
+	}
+
+
+	#twitter {
+		background-color: #1b95e0;
+		i {
+			position: relative;
+		    top: 2px;
+		    display: inline-block;
+		    width: 14px;
+		    height: 14px;
+		    background-size: 14px 14px;
+		    background: transparent 0 0 no-repeat;
+		    background: url("../../../assets/images/twitter-icon.png");
+		}
+	}
+
+	#twitter:hover {
+		background-color: lighten(#1b95e0, 10%);
+		cursor: pointer;
+	}
+
+
+	#facebook {
+		background-color: #3b55a0;
+		i {
+			position: relative;
+		    top: 2px;
+		    display: inline-block;
+		    width: 14px;
+		    height: 14px;
+		    background-size: 14px 14px;
+		    background: transparent 0 0 no-repeat;
+		    background: url("../../../assets/images/facebook-icon.png");
+		}
+	}
+
+	#facebook:hover {
+		background-color: lighten(#3b55a0, 10%);
+		cursor: pointer;
+	}
+
+
+	#print {
+		background-color: #333333;
+		i {
+			position: relative;
+		    top: 2px;
+		    display: inline-block;
+		    width: 14px;
+		    height: 14px;
+		    background-size: 14px 14px;
+		    background: transparent 0 0 no-repeat;
+		    background: url("../../../assets/images/printer.png");
+		}
+	}
+
+	#print:hover {
+		background-color: lighten(#333333, 10%);
+		cursor: pointer;
+	}
+}
