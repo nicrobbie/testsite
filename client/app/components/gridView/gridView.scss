@@ -18,7 +18,7 @@ $desktop: new-breakpoint(min-width 1000px);
 			@include span-columns(5);
 			margin-left: 48px;
 		}
-		background: url("http://www.greencarlistings.com/wp-content/uploads/hybrid/Hondas.jpg");
+		background: url("http://o.aolcdn.com/commerce/autodata/images/USC60HOC021A121001.jpg");
 
 		background-size: cover;
 		margin-bottom: 15px;
@@ -31,14 +31,29 @@ $desktop: new-breakpoint(min-width 1000px);
 		.hover-tile-container {
 			height: 350px;
 			position: relative;
-			bottom: 25px;
+			bottom: 55px;
 		}
 
-		.hover-tile-container:hover > .hover-tile {
-			position: relative;
-			bottom: -25px;
-			transform: translate(0, -100%);
+		.popper{
+			.bringDown{
+				display:none;
+			}
+			color:white;
+			background: transparentize(#000, 0.2);
+			border-radius: 50px 50px 0 0;
+			line-height:50%;
+			width:50%;
+			padding-top:10px;
+			padding-bottom:5px;
+			margin:auto;
 		}
+
+		/*.hover-tile-container:hover > .hover-tile {
+			position: relative;
+			bottom: -30px;
+			transform: translate(0, -100%);
+			background: #000;
+		}*/
 
 		.hover-tile {
 			color: white;
@@ -47,16 +62,18 @@ $desktop: new-breakpoint(min-width 1000px);
 		}
 
 		.hover-tile-hidden {
-			background: transparentize(#000, 0.25);
+			background: transparentize(#000, 0.2);
 			//height: auto; makes it only come up to end of details
 			p {
 				text-align: left;
 				color: white;
 				line-height: 1.5em;
+				margin-bottom: 0;
 			}
 
 			h4 {
 				margin: 0 0 0.5em 0;
+				padding-top: 3px;
 			}
 		}
 	}

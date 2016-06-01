@@ -5,6 +5,6 @@ export default class paginationController {
 
   /* @ngInject */
   constructor() {
-    this.title = "I am a pagination component"
+    //this.per=[{id:"1", label:"5"},{id:"10", label:"10"},{id:"15", label:"15"},{id:"20", label:"20"}];
   }
 }
