@@ -22,7 +22,7 @@ export default angular.module("vdp" , [uirouter, vdpReserve, vdpTradein, vdpTest
   .run(run)
   .service('InfoService', function ($http, $q) {
 
-  	this.getInfo = function (id) {
+  	this.getInfossss = function (id) {
   		return $http.jsonp(`http://live-uat.cdemo.com/jsonp/detail/${id}?callback=JSON_CALLBACK`);
   	};
 

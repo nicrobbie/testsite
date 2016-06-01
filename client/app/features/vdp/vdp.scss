@@ -4,6 +4,7 @@
 #vdp-content {
 	@include outer-container(100%);
 	background-color: #EFEFEF;
+
 	#vdp-wrapper {
 		max-width: 1300px;
 		margin-left: auto;
