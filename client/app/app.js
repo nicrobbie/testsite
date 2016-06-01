@@ -27,14 +27,14 @@ import vdpDealer from './components/vdpDealer';
 import vdpImages from './components/vdpImages';
 import vdpInfo from './components/vdpInfo';
 import vdpSimilar from './components/vdpSimilar';
-
+import header from './components/header';
 
 import searchPanel from './components/searchPanel';
 import listView from './components/listView';
 
 
 
-export default angular.module('testsite', [uirouter, ngAnimate, footer, main, records, vdp, filterBank, pagination, gridView, vdpActions,
+export default angular.module('testsite', [uirouter, ngAnimate, footer, header, main, records, vdp, filterBank, pagination, gridView, vdpActions,
 	vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, searchPanel, listView])
 
   .config(config)
