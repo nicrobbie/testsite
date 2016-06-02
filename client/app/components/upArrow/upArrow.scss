@@ -1,0 +1,13 @@
+.popper{
+	.bringDown{
+		display:none;
+	}
+	color:white;
+	background: transparentize(#000, 0.2);
+	border-radius: 50px 50px 0 0;
+	line-height:50%;
+	width:50%;
+	padding-top:10px;
+	padding-bottom:5px;
+	margin:auto;
+}
