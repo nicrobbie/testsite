@@ -11,18 +11,34 @@
 			  	<h3>Search Term</h3>
 			  	<input class="search" type="text" name="term" placeholder=" 🔍  Search term"></input>
 			  	<hr>
+			  	
+			  	<h3>Product</h3>
+			  	<input type="select" placeholder="Any product"></input>
+			  	<hr>
+
 			  	<h3>Category</h3>
 			  	<input type="select" placeholder="Any category"></input>
 			  	<hr>
-			  	<h3>Make</h3>
-			  	<input type="select" placeholder="Any Make"></input>
+
+			  	<!--<select id="product" ng-model="main.productSelected" ng-options="p.name for p in main.products"></select>
 			  	<hr>
+			  	
+			  	<h3 ng-show="main.productSelected">Category</h3>
+	  			<select id="product" ng-show="main.productSelected" ng-model="main.productCategorySelected" ng-options="c.name for c in main.productSelected.categories">
+					<option value="">All</option>
+				</select>
+			  	<hr>-->
+			  	
+			  	<h3>Make</h3>
+			  	<input type="select" placeholder="Any make"></input>
+			  	<hr>
+
 			  	<h3>Model</h3>
-			  	<input type="select" placeholder="Any Model"></input>
+			  	<input type="select" placeholder="Any model"></input>
 			  	<hr>
 
 			  	<h3>Price (slider)</h3><br>
-	            <rzslider rz-slider-model="vm.priceRangeSlider.minValue" rz-slider-high="vm.priceRangeSlider.maxValue" rz-slider-options="vm.priceRangeSlider.options" style="width:80%; margin: auto;"></rzslider>
+	            <rzslider rz-slider-model="vm.priceRangeSlider.minValue" rz-slider-high="vm.priceRangeSlider.maxValue" rz-slider-options="vm.priceRangeSlider.options" style="width:80%; margin: auto;" id="priceSlider"></rzslider>
 				<br><br>Min Value: $
 	            <input type="number" ng-model="vm.priceRangeSlider.minValue" step="10000"/>
 	            <br>Max Value: $
@@ -48,15 +64,19 @@
 			  	<h3>Transmission</h3>
 			  	<input type="select" placeholder="Any transmission"></input>
 			  	<hr>
+				
 				<h3>Engine</h3>
 				<input type="select" placeholder="Any engine"></input>
 				<hr>
+				
 				<h3>Trim</h3>
 				<input type="select" placeholder="Any trim"></input>
 				<hr>
+				
 				<h3>Trim</h3>
 				<input type="select" placeholder="Any trim"></input>
 				<hr>
+				
 				<h3>Trim</h3>
 				<input type="select" placeholder="Any trim"></input>
 			</div>

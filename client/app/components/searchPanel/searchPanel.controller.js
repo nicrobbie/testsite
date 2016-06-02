@@ -42,11 +42,16 @@ export default class searchPanelController {
     };
   }
 
-  openModal() {
-  	var modal = document.getElementById("myModal");
-  	modal.style.display = "block";
-  	var content = document.getElementById("myContent");
+  openModal($timeout) {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+
+    var content = document.getElementById("myContent");
     content.style.display = "block";
+
+    /*$timeout(function () {
+        this.$broadcast('rzSliderForceRender');
+    });*/
   }
 
   closeModal() {
