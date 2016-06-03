@@ -1,4 +1,29 @@
+@import "../../shared/variables.scss";
+
 #header-content {
+	@include outer-container(100%);
 	padding: 10px;
 	border-bottom: 2px solid #156ABB;
+
+	#header-logo {
+		@include span-columns(12);
+		text-align: center;
+
+		@include media($desktop) {
+			@include span-columns(6);
+			text-align: left;
+		}
+	}
+	
+	#header-social {
+		@include span-columns(12);
+		text-align: center;
+		//float: none;
+
+		@include media($desktop) {
+			@include span-columns(6);
+			text-align: right;
+			//float: right;
+		}
+	}
 }
