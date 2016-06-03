@@ -1,13 +1,12 @@
 @import "../../../../node_modules/angular-date-picker/angular-date-picker.css";
 @import "../../shared/variables.scss";
 
+$desktop: new-breakpoint(min-width 1200px);
+
 
 #vdp-reserve-content {
 
 	width: 100%;
-	margin: 10px;
-	
-	
 
 	div {
 		text-align: center;
@@ -29,6 +28,7 @@
 		input {
 			@include default-input();
 			width: auto;
+			background-color: lightgray;
 		}
 	}
 

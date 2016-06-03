@@ -1,4 +1,3 @@
-
 export default class vdpReserveController {
   static get UID(){
     return "vdpReserveController"
@@ -6,7 +5,6 @@ export default class vdpReserveController {
 
   /* @ngInject */
   constructor() {
-    this.title = "I am a vdpReserve component";
     this.date = new Date().toISOString().substring(0, 10);
     this.hour = 3;
     this.hours = [];
@@ -17,7 +15,6 @@ export default class vdpReserveController {
     	this.hours.push(i);
     	this.minutes.push(i * 5);
     }
-    console.log("hours: " + this.hours[0]);
   }
 
   formatDate(date) {
