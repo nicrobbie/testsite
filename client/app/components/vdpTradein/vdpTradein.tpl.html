@@ -1,113 +1,154 @@
 <div id="vdp-tradein-content">
 	<h1>Get an estimate for a trade in</h1>
-	<span class="line-divide"></span>
 	
 	<form id="vdp-tradein-form">
-		<section>
-			<div id="tradein-vehicle-info">
-				<h2>Vehicle Info</h2>
-				<table>
-					<tr>
-						<td>Year</td>
-						<td><select ng-model="tradein.year" ng-options="a for a in vm.years"></select></td>
-					</tr>
-					<tr>
-						<td>Make</td>
-						<td><select ng-model="tradein.make" ng-options="a for a in vm.makes"></select></td>
-					</tr>
-					<tr>
-						<td>Model</td>
-						<td><select ng-model="tradein.model" ng-options="a for a in vm.models"></select></td>
-					</tr>
-					<tr>
-						<td>Trim</td>
-						<td><input type="text" ng-model="tradein.trim" /></td>
-					</tr>
-					<tr>
-						<td>Kilometers</td>
-						<td><input type="number" ng-model="tradein.km" /></td>
-					</tr>
-					<tr>
-						<td>Exterior Condition</td>
-						<td>
-							<input id="exterior-poor" type="radio" ng-model="tradein.exterior">
-							<label for="exterior-poor">Poor</label>
+		<section class="cards">
+			<div id="tradein-vehicle-info" class="card">
+				<div class="card-header">
+					<h2>Vehicle Info</h2>
+				</div>
 
-							<input id="exterior-average" type="radio" ng-model="tradein.exterior">
-							<label for="exterior-average">Average</label>
+				<div class="card-copy">
+					<table>
+						<tr>
+							<td>Year</td>
+							<td><select ng-model="tradein.year" ng-options="a for a in vm.years"></select></td>
+						</tr>
+						<tr>
+							<td>Make</td>
+							<td><select ng-model="tradein.make" ng-options="a for a in vm.makes"></select></td>
+						</tr>
+						<tr>
+							<td>Model</td>
+							<td><select ng-model="tradein.model" ng-options="a for a in vm.models"></select></td>
+						</tr>
+						<tr>
+							<td>Trim</td>
+							<td><input type="text" ng-model="tradein.trim" /></td>
 
-							<input id="exterior-good" type="radio" ng-model="tradein.exterior">
-							<label for="exterior-good">Good</label>
-
-							<input id="exterior-excellent" type="radio" ng-model="tradein.exterior">
-							<label for="exterior-excellent">Excellent</label>
-						</td>
-					</tr>
-					<tr>
-						<td>Interior Condition</td>
-						<td>
-							<input id="interior-poor" type="radio" ng-model="tradein.interior">
-							<label for="interior-poor">Poor</label>
-
-							<input id="interior-average" type="radio" ng-model="tradein.interior">
-							<label for="interior-average">Average</label>
-							<label for="interior-good">
-								<input id="interior-good" type="radio" ng-model="tradein.interior">
-								Good
-							</label>
-
-							<input id="interior-excellent" type="radio" ng-model="tradein.interior">
-							<label for="interior-excellent">Excellent</label>
-						</td>
-					</tr>
-					<tr>
-						<td>Any Accidents?</td>
-						<td>
-							<input id="accident-no" type="radio" ng-model="tradein.accident">
-							<label for="accident-no">No</label>
-
-							<input id="accident-yes" type="radio" ng-model="tradein.accident">
-							<label for="accident-yes">Yes</label>
-						</td>
-					</tr>
-					<tr>
-						<td>Original Owner?</td>
-						<td>
-							<input id="accident-no" type="radio" ng-model="tradein.accident">
-							<label for="accident-no">No</label>
-							
-							<input id="accident-yes" type="radio" ng-model="tradein.accident">
-							<label for="accident-yes">Yes</label>
-						</td>
-					</tr>
-				</table>
+						</tr>
+						<tr>
+							<td>Kilometers</td>
+							<td><input type="number" ng-model="tradein.km" /></td>
+						</tr>
+						<tr>
+							<td>Exterior Condition</td>
+							<td>
+								<ul>
+									<li>
+										<input id="exterior-poor" type="radio" ng-model="tradein.exterior" value="poor">
+										<label for="exterior-poor">Poor</label>
+									</li>
+									<li>
+										<input id="exterior-average" type="radio" ng-model="tradein.exterior" value="average">
+										<label for="exterior-average">Average</label>
+									</li>
+									<li>
+										<input id="exterior-good" type="radio" ng-model="tradein.exterior" value="good" ng-checked="true">
+										<label for="exterior-good">Good</label>
+									</li>
+									<li>
+										<input id="exterior-excellent" type="radio" ng-model="tradein.exterior" value="excellent">
+										<label for="exterior-excellent">Excellent</label>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>Interior Condition</td>
+							<td>
+								<ul>
+									<li>
+										<input id="interior-poor" type="radio" ng-model="tradein.interior" value="poor">
+										<label for="interior-poor">Poor</label>
+									</li>
+									<li>
+										<input id="interior-average" type="radio" ng-model="tradein.interior" value="average">
+										<label for="interior-average">Average</label>
+									</li>
+									<li>
+										<input id="interior-good" type="radio" ng-model="tradein.interior" value="good" ng-checked="true">
+										<label for="interior-good">Good</label>
+									</li>
+									<li>
+										<input id="interior-excellent" type="radio" ng-model="tradein.interior" value="excellent">
+										<label for="interior-excellent">Excellent</label>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>Any Accidents?</td>
+							<td>
+								<ul>
+									<li>
+										<input id="accident-no" type="radio" ng-model="tradein.accident" value="no" ng-checked="true">
+										<label for="accident-no">No</label>
+									</li>
+									<li>
+										<input id="accident-yes" type="radio" ng-model="tradein.accident" value="yes">
+										<label for="accident-yes">Yes</label>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>Original Owner?</td>
+							<td>
+								<ul>
+									<li>
+										<input id="owner-no" type="radio" ng-model="tradein.owner" value="no" ng-checked="true">
+										<label for="owner-no">No</label>
+									</li>
+									<li>
+										<input id="owner-yes" type="radio" ng-model="tradein.owner" value="yes">
+										<label for="owner-yes">Yes</label>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="visibility: hidden">
+								<input ng-model="tradein.agree" type="checkbox" name="tradeinAgree" required>
+								By providing my contact information i agree to be contacted by this business about their products and services. i understand i can withdraw this consent at any time
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
-			<div id="tradein-info">
-				<h2>Personal Info</h2>
-				<table>
-					<tr>
-						<td>First Name</td>
-						<td><input ng-model="tradein.firstName" type="text" name="tradeinFirstName" placeholder="First name..." required></td>
-					</tr>
-					<tr>
-						<td>Last Name</td>
-						<td><input ng-model="tradein.lastName" type="text" name="tradeinLastName" placeholder="Last name..." required></td>
-					</tr>
-					<tr>
-						<td>Phone</td>
-						<td><input ng-model="tradein.phone" type="text" name="tradeinPhone" placeholder="Phone number..." required></td>
-					</tr>
-					<tr>
-						<td>Email</td>
-						<td><input ng-model="tradein.email" type="text" name="tradeinEmail" placeholder="Email..." required></td>
-					</tr>
-					<tr>
-						<td colspan="2">
-							<input ng-model="tradein.agree" type="checkbox" name="tradeinAgree" required>
-							By providing my contact information i agree to be contacted by this business about their products and services. i understand i can withdraw this consent at any time
-						</td>
-					</tr>
-				</table>
+
+
+			<div id="tradein-info" class="card">
+				<div class="card-header">
+					<h2>Personal Info</h2>
+				</div>
+
+				<div class="card-copy">
+					<table>
+						<tr>
+							<td>First Name</td>
+							<td><input ng-model="tradein.firstName" type="text" name="tradeinFirstName" placeholder="First name..." required></td>
+						</tr>
+						<tr>
+							<td>Last Name</td>
+							<td><input ng-model="tradein.lastName" type="text" name="tradeinLastName" placeholder="Last name..." required></td>
+						</tr>
+						<tr>
+							<td>Phone</td>
+							<td><input ng-model="tradein.phone" type="text" name="tradeinPhone" placeholder="Phone number..." required></td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td><input ng-model="tradein.email" type="text" name="tradeinEmail" placeholder="Email..." required></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input ng-model="tradein.agree" type="checkbox" name="tradeinAgree" required>
+								By providing my contact information i agree to be contacted by this business about their products and services. i understand i can withdraw this consent at any time
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</section>
 		<button class="action-button" style="float: right">Submit</button>

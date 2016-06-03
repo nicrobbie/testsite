@@ -29,16 +29,14 @@ import vdpInfo from './components/vdpInfo';
 import vdpSimilar from './components/vdpSimilar';
 import upArrow from './components/upArrow';
 import header from './components/header';
+import socialMedia from './components/socialMedia';
 import viewSelect from './components/viewSelect';
-
 import searchPanel from './components/searchPanel';
 import listView from './components/listView';
 
 
 
-export default angular.module('testsite', [uirouter, ngAnimate, footer, header, main, records, vdp, filterBank, pagination, gridView, vdpActions,
-	vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, searchPanel, listView, upArrow, viewSelect])
-
+export default angular.module('testsite', [uirouter, ngAnimate, footer, header, main, records, vdp, filterBank, pagination, gridView, vdpActions, vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, searchPanel, listView, socialMedia, upArrow, viewSelect])
   .config(config)
   .config(routes)
   .constant("AppConstants", appConstants)

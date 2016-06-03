@@ -1,49 +1,65 @@
 <div id="vdp-testdrive-content">
 	<h1>Schedule a test drive</h1>
-	<span class="line-divide"></span>
-	
+
 	<form id="vdp-testdrive-form">
-		<section>
-			<div id="testdrive-date">
-				<h2>Select a Date</h2>
-				<date-picker ng-model="testdrive.date">
-				</date-picker>
-				<input type="hidden" ng-model="testdrive.date">
+		<section class="cards">
+			<div id="testdrive-date" class="card">
+				<div class="card-header">
+					<h2>Select a Date</h2>
+				</div>
+
+				<div class="card-copy">
+					<date-picker ng-model="testdrive.date" format-date="vm.formatDate" parse-date="vm.parseDate" ng-init="testdrive.date = vm.date">
+					</date-picker></br>
+					<input type="text" ng-model="testdrive.date" ng-disabled="true">
+				</div>
 			</div>
 
-			<div id="testdrive-time">
-				<h2>Select a Time</h2>
-				<select ng-model="testdrive.hour" ng-options="h for h in vm.hours"></select>
-				<select ng-model="testdrive.minute" ng-options="m for m in vm.minutes"></select>
-				<select ng-model="testdrive.ampm" ng-options="a for a in vm.ampm"></select>
+			
+
+			<div id="testdrive-time" class="card">
+				<div class="card-header">
+					<h2>Select a Time</h2>
+				</div>
+
+				<div class="card-copy">
+					<select ng-model="testdrive.hour" ng-init="testdrive.hour = vm.hour" ng-options="h for h in vm.hours"></select>
+					<select ng-model="testdrive.minute" ng-init="testdrive.hour = vm.minute" ng-options="m for m in vm.minutes"></select>
+					<select ng-model="testdrive.ampm" ng-init="testdrive.hour = vm.ampm[1]" ng-options="a for a in vm.ampm"></select>
+				</div>
 			</div>
 
-			<div id="testdrive-info">
-				<h2>Enter Your Info</h2>
-				<table>
-					<tr>
-						<td>First Name</td>
-						<td><input ng-model="testdrive.firstName" type="text" name="testdriveFirstName" placeholder="First name..." required></td>
-					</tr>
-					<tr>
-						<td>Last Name</td>
-						<td><input ng-model="testdrive.lastName" type="text" name="testdriveLastName" placeholder="Last name..." required></td>
-					</tr>
-					<tr>
-						<td>Phone</td>
-						<td><input ng-model="testdrive.phone" type="text" name="testdrivePhone" placeholder="Phone number..." required></td>
-					</tr>
-					<tr>
-						<td>Email</td>
-						<td><input ng-model="testdrive.email" type="text" name="testdriveEmail" placeholder="Email..." required></td>
-					</tr>
-					<tr>
-						<td colspan="2">
-							<input ng-model="testdrive.agree" type="checkbox" name="testdriveAgree" required>
-							By providing my contact information i agree to be contacted by this business about their products and services. i understand i can withdraw this consent at any time
-						</td>
-					</tr>
-				</table>
+			<div id="testdrive-info" class="card">
+				<div class="card-header">
+					<h2>Enter Your Info</h2>
+				</div>
+
+				<div class="card-copy">
+					<table>
+						<tr>
+							<td>First Name</td>
+							<td><input ng-model="testdrive.firstName" type="text" name="testdriveFirstName" placeholder="First name..." required></td>
+						</tr>
+						<tr>
+							<td>Last Name</td>
+							<td><input ng-model="testdrive.lastName" type="text" name="testdriveLastName" placeholder="Last name..." required></td>
+						</tr>
+						<tr>
+							<td>Phone</td>
+							<td><input ng-model="testdrive.phone" type="text" name="testdrivePhone" placeholder="Phone number..." required></td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td><input ng-model="testdrive.email" type="text" name="testdriveEmail" placeholder="Email..." required></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input ng-model="testdrive.agree" type="checkbox" name="testdriveAgree" required>
+								By providing my contact information i agree to be contacted by this business about their products and services. i understand i can withdraw this consent at any time
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</section>
 		<button class="action-button" style="float: right">Submit</button>

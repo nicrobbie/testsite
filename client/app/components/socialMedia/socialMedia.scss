@@ -1,6 +1,6 @@
 #socialMedia-content {
 	
-	float: right;
+	//float: right;
 	margin: 15px;
 
 	span {
@@ -13,14 +13,20 @@
 		margin: 4px;
 	}
 
-	#pinterest {
+	#pinterest, #twitter, #facebook, #print {
 		i {
 			position: relative;
 		    top: 2px;
 		    display: inline-block;
+			background: transparent 0 0 no-repeat;
+		}
+	}
+
+
+	#pinterest {
+		i {
 		    width: 40px;
 		    height: 14px;
-		    background: transparent 0 0 no-repeat;
 		    background-image: url("../../../assets/images/pinit.svg");
 		}
 	}
@@ -29,13 +35,9 @@
 	#twitter {
 		background-color: #1b95e0;
 		i {
-			position: relative;
-		    top: 2px;
-		    display: inline-block;
 		    width: 14px;
 		    height: 14px;
 		    background-size: 14px 14px;
-		    background: transparent 0 0 no-repeat;
 		    background: url("../../../assets/images/twitter-icon.png");
 		}
 	}
@@ -49,13 +51,9 @@
 	#facebook {
 		background-color: #3b55a0;
 		i {
-			position: relative;
-		    top: 2px;
-		    display: inline-block;
 		    width: 14px;
 		    height: 14px;
 		    background-size: 14px 14px;
-		    background: transparent 0 0 no-repeat;
 		    background: url("../../../assets/images/facebook-icon.png");
 		}
 	}
@@ -69,13 +67,9 @@
 	#print {
 		background-color: #333333;
 		i {
-			position: relative;
-		    top: 2px;
-		    display: inline-block;
 		    width: 14px;
 		    height: 14px;
 		    background-size: 14px 14px;
-		    background: transparent 0 0 no-repeat;
 		    background: url("../../../assets/images/printer.png");
 		}
 	}
