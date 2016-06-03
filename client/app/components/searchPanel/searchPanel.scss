@@ -1,8 +1,12 @@
 @import "../../bourbon/bourbon";
 @import "../../neat/neat";
-$desktop: new-breakpoint(min-width 1000px);
-$cdemo: #156abb;
+@import "../../../../node_modules/angularjs-slider/dist/rzslider.css";
 
+$desktop: new-breakpoint(min-width 800px);
+$cdemo: #156abb;
+span{
+    opacity:1;
+}
 search-panel{
     .modal-fade-screen {
         display: none;
@@ -30,7 +34,12 @@ search-panel{
         overflow: auto;
         background: #CCC;
         box-shadow: 0px 0px 54px 26px rgba(0,0,0,0.9);
-        
+        .close{
+            position:relative;
+            top: 0;
+            right:0;
+            z-index: 999;
+        }
         .options{
             position:fixed;
             z-index: 1;
@@ -47,6 +56,7 @@ search-panel{
             hr{
                 width:90%;
             }
+
         }
         .buttons{
             position:fixed;
