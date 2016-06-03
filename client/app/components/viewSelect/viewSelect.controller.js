@@ -8,19 +8,19 @@ export default class viewSelectController {
     this.title = "I am a viewSelect component"
   }
 
-  gridClick(){
+  /*gridClick(){
     document.getElementById('view').innerHTML=`<div id="gridView"><grid-view></grid-view></div>`;    
   }
   listClick(){
     document.getElementById('view').innerHTML=`<div id="listView"><list-view></list-view></div>`;    
-  }
+  }*/
   
-  /*gridClick(){
+  gridClick(){
     document.getElementById('gridView').style.display="block";    
   	document.getElementById('listView').style.display="none";  	
   }
   listClick(){
     document.getElementById('listView').style.display="block";
     document.getElementById('gridView').style.display="none";
-  }*/
+  }
 }

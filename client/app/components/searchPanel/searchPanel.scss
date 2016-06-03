@@ -8,6 +8,11 @@ span{
     opacity:1;
 }
 search-panel{
+    #searchBtn{
+        height: 50px;
+        width: 50px;
+        float: left;
+    }
     .modal-fade-screen {
         display: none;
         position: fixed;

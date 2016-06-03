@@ -1,18 +1,20 @@
 <div id="main">
-	Show
-	<select ng-model="vm.perPage">
-    	<option value="5">5</option>
-		<option value="10">10</option>
-		<option value="15">15</option>
-		<option value="20">20</option>
-		<option value="25">25</option>
-    </select>
-    {{vm.perPage}}
-	per page
 	
-	<br><br>
+	<div class="per">
+		<br>
+		Show
+		<select ng-model="vm.perPage">
+	    	<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="15">15</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+	    </select>
+	    {{vm.perPage}}
+		per page
+	</div>
 
-	<div class="center">
+	<div class="pag">
 		<ul id="pagination">
 		  <li><a href=""><<</a></li>
 		  <li><a href="">1</a></li>
@@ -23,4 +25,5 @@
 		  <li><a href="">>></a></li>
 		</ul>
 	</div>
+	<br><view-select></view-select>
 </div>
