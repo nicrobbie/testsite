@@ -15,10 +15,14 @@
 	</div>
 
 
-	<div id="image-modal" class="img-modal" onclick="this.style.display='none'">
-		<span class="close-button w3-hover-red w3-text-white">&times;</span>
-		<div class="image-modal-content image-animate-zoom">
-			<img id="image-content" style="width:100%">
+	<div id="image-modal" class="img-modal" ><!-- onclick="this.style.display='none'"> -->
+		<span class="close-button w3-hover-red w3-text-white" ng-click="vm.closeModal()">&times;</span>
+		<div class="image-modal-content image-animate-zoom" ng-click="vm.closeModal()">
+			<img id="modal-image" style="width:100%">
+		</div>
+		<div id="modal-slideshow-buttons">
+			<button class="modal-slideshow-button" id="modal-slideshow-button-left" ng-click="vm.plusModal(-1)">❮ Prev</button>
+		   	<button class="modal-slideshow-button" id="modal-slideshow-button-right" ng-click="vm.plusModal(1)">Next ❯</button>
 		</div>
 	</div>
 </div>

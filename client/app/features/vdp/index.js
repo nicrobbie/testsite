@@ -14,7 +14,6 @@ import config from './vdp.config';
 import vdpReserve from '../../components/vdpReserve';
 import vdpTradein from '../../components/vdpTradein';
 import vdpTestdrive from '../../components/vdpTestdrive';
-//import socialMedia from '../../components/socialMedia';
 
 export default angular.module("vdp" , [uirouter, vdpReserve, vdpTradein, vdpTestdrive])
   .config(config)
