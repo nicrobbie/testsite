@@ -1,4 +1,17 @@
-<div class="listview-content">
+<div class="listview-content" ng-repeat="x in vm.records| limitTo:8">
+	<div class="list">
+		<div class="title"><h1>{{x.title}}</h1><hr></div>
+		<img class="image" src="http://o.aolcdn.com/commerce/autodata/images/USC60HOC021A121001.jpg">
+		<div class="details">
+	    	<p>Price: {{x.price}}</p>
+        	<p>Odometer: {{x.odemeter}}</p>
+        	<p>Exterior: {{x.exterior}}</p>
+        	<p>Drivetrain: {{x.drivetrain}}</p>
+	    </div>
+	</div>
+</div>
+
+<!--<div class="listview-content">
 	<div class="list">
 		<div class="title"><h1>Honda Civic AWD 4Dr SDN</h1><hr></div>
 		<img class="image" src="http://o.aolcdn.com/commerce/autodata/images/USC60HOC021A121001.jpg">
@@ -14,4 +27,4 @@
 	    	<h3>Price: $25 000<br>Odometer: 15 000 Km<br>Exterior: Silver<br>Interior: Black Leather</h3>
 	    </div>
 	</div>
-</div>
+</div>-->

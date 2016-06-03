@@ -7,6 +7,9 @@ $desktop: new-breakpoint(min-width 1000px);
 	@include outer-container(95%);
 	margin-right: auto;
 	margin-left: auto;
+	.spacer{
+		height: 55px;
+	}
 	.hover-tile-outer {
 		@include span-columns(12);
 
@@ -35,9 +38,6 @@ $desktop: new-breakpoint(min-width 1000px);
 		}
 
 		.popper{
-			.bringDown{
-				display:none;
-			}
 			color:white;
 			background: transparentize(#000, 0.2);
 			border-radius: 50px 50px 0 0;
@@ -63,6 +63,7 @@ $desktop: new-breakpoint(min-width 1000px);
 
 		.hover-tile-hidden {
 			background: transparentize(#000, 0.2);
+			height: 95%;
 			//height: auto; makes it only come up to end of details
 			p {
 				text-align: left;
