@@ -19,9 +19,9 @@ export default angular.module("vdp" , [uirouter, vdpReserve, vdpTradein, vdpTest
   .config(config)
   .config(routes)
   .run(run)
-  .service('InfoService', function ($http, $q) {
+  .service('ItemService', function ($http, $q) {
 
-  	this.getInfossss = function (id) {
+  	this.getItem = function (id) {
   		return $http.jsonp(`http://live-uat.cdemo.com/jsonp/detail/${id}?callback=JSON_CALLBACK`);
   	};
 

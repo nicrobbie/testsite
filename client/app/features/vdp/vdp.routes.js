@@ -11,6 +11,17 @@ export default function routes($stateProvider) {
     url: "/vdp",
     template: require("./vdp.tpl.html"),
     controller: controller.UID,
-    controllerAs: "vdp"
+    controllerAs: "vdp",
+    resolve: {
+    	item: [
+	    	'ItemService',
+	    	function (ItemService) {
+	    		return ItemService.getItem(625165)
+	    			.then(response => {
+	    				return response.data[0];
+	    			});
+	    	}
+    	]
+	}
   });
 }
