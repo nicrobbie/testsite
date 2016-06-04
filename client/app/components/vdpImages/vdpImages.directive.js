@@ -4,7 +4,7 @@ export default function vdpImages(){
   return {
     restrict: 'EA',
     scope: {
-
+        item: '='
     },
     template: require("./vdpImages.tpl.html"),
     controller: controller.UID,

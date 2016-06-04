@@ -1,28 +1,23 @@
 <div id="images-content">
-	<h1 style="margin-top: 10px">{{vm.record.title}}</h1>
+	<h1 style="margin-top: 10px">{{vm.item.title}}</h1>
  	
  	
- 	<div id="slideshow">
- 		<span ng-repeat="media in vm.pictures">
- 			<img class="mySlides" style="display: none;" alt="{{media.seo_alt}}" title="{{media.seo_title}}" ng-src="http://static.cdemo.com/625165/1024/{{media.photo_name}}" ng-click="vm.showImage()">
+ 	<div id="slideshow" style="position: relative">
+ 		<span ng-repeat="media in vm.item.general_photo_list">
+ 			<img class="mySlides" style="display: none;" alt="{{media.seo_alt}}" title="{{media.seo_title}}" ng-src="{{media.src_set}}" ng-click="vm.showImage()">
  		</span>
+ 		<a class="slideshow-buttons" style="left:0;" ng-click="vm.plusDivs(-1)">&#10094;</a>
+		<a class="slideshow-buttons" style="right:0;" ng-click="vm.plusDivs(1)">&#10095;</a>
  	</div>
 	
-	
-	<div id="slideshow-buttons">
-		<button class="slideshow-button" ng-click="vm.plusDivs(-1)">❮ Prev</button>
-	   	<button class="slideshow-button" ng-click="vm.plusDivs(1)">Next ❯</button>
-	</div>
-
-
 	<div id="image-modal" class="img-modal" ><!-- onclick="this.style.display='none'"> -->
 		<span class="close-button w3-hover-red w3-text-white" ng-click="vm.closeModal()">&times;</span>
-		<div class="image-modal-content image-animate-zoom" ng-click="vm.closeModal()">
-			<img id="modal-image" style="width:100%">
+		<div class="image-modal-content image-animate-zoom">
+			<span ng-click="vm.closeModal()">
+				<img id="modal-image" style="width:100%">
+			</span>
 		</div>
-		<div id="modal-slideshow-buttons">
-			<button class="modal-slideshow-button" id="modal-slideshow-button-left" ng-click="vm.plusModal(-1)">❮ Prev</button>
-		   	<button class="modal-slideshow-button" id="modal-slideshow-button-right" ng-click="vm.plusModal(1)">Next ❯</button>
-		</div>
+ 		<a class="slideshow-buttons" style="left:0; font-size: 500%;" ng-click="vm.plusModal(-1)">&#10094;</a>
+		<a class="slideshow-buttons" style="right:0; font-size: 500%;" ng-click="vm.plusModal(1)">&#10095;</a>
 	</div>
 </div>

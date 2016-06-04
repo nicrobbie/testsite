@@ -1,5 +1,5 @@
 
-<h1>Dealer Info - <span class="party-name">{{vm.record.party_name}}</span></h1>
+<h1>Dealer Info - <span class="party-name">{{vm.item.party_name}}</span></h1>
 
 <div id="dealer-content">
 
@@ -48,10 +48,10 @@
 			</div>
 			<div class="card-copy">
 				<ul>
-					<li>Phone: {{vm.record.telephone}}</li>
-					<li>Secondary Phone: {{vm.record.telephone2}}</li>
-					<li>Fax: {{vm.record.party_fax}}</li>
-					<li>Email: <a href="mailto:{{vm.record.party_email}}">{{vm.record.party_email}}</a></li>
+					<li>Phone: {{vm.item.telephone}}</li>
+					<li>Secondary Phone: {{vm.item.telephone2}}</li>
+					<li>Fax: {{vm.item.party_fax}}</li>
+					<li>Email: <a href="mailto:{{vm.item.party_email}}">{{vm.item.party_email}}</a></li>
 					<li><a href="">Visit Dealer Website</a></li>
 				</ul>
 			</div>
@@ -63,12 +63,11 @@
 			</div>
 			<div class="card-copy">
 				<ul>
-					<li>{{vm.record.address}}</li>
-					<li>{{vm.record.party_city}} {{vm.record.party_province}}, {{vm.record.party_postalcode}}</li>
+					<li>{{vm.item.address}}</li>
+					<li>{{vm.item.party_city}} {{vm.item.party_province}}, {{vm.item.party_postalcode}}</li>
 				</ul>
 				<button id="directions-btn">Directions</button>
 			</div>
 		</div>
 	</section>
 </div>
-

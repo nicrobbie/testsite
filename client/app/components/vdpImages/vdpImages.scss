@@ -5,8 +5,7 @@
 	#slideshow {
 		max-height: 500px;
 		overflow: auto;
-	    padding: 5px;
-		background-color: #ddd;
+		background-color: #000;
 		text-align: center;
 
 		img {
@@ -18,56 +17,7 @@
 			cursor: pointer;
 		}
 	}
-
-	#slideshow-buttons {
-		margin-right: auto;
-		margin-left: auto;
-		text-align: center;
-
-		.slideshow-button {
-			@include default-button();
-			width: 30%;
-			display: inline-block;
-		}
-
-		.slideshow-button:hover {
-			@include default-button-hover();
-		}
-
-		.slideshow-button:active {
-			@include default-button-active();
-		}
-	}
-
 	
-	#modal-slideshow-buttons {
-	    position:fixed;
-	    top:50%;
-
-		.modal-slideshow-button {
-			@include default-button();
-		}
-		
-		#modal-slideshow-button-left {
-			width: 200px;
-			position:fixed;
-			left: 0px;
-		}
-
-		#modal-slideshow-button-right {
-			width: 200px;
-			position:fixed;
-			right: 0px;
-		}
-
-		.modal-slideshow-button:hover {
-			@include default-button-hover();
-		}
-
-		.modal-slideshow-button:active {
-			@include default-button-active();
-		}
-	}
 
 	.img-modal{
 		z-index:3;
@@ -110,12 +60,17 @@
 	}
 	
 	.image-modal-content {
-	    margin: auto;
-	    position: relative;
-	    padding: 0;
-	    outline: 0;
-	    max-width: 1000px;
-	    cursor: pointer;
+		max-width: 1000px;
+		background-color: #000;
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+
+	    img {
+	    	margin-right: auto;
+	    	margin-left: auto;
+	    	cursor: pointer;
+	    }
 	}
 
 	.image-animate-zoom {
@@ -139,5 +94,26 @@
 	    to {
 	        transform: scale(1)
 	    }
+	}
+
+
+	.slideshow-buttons {
+		background-color: rgba(0,0,0,0);
+		border-radius: 50%;
+		color: white;
+		cursor: pointer;
+		display: block;
+		font-size: 48px;
+		height: 100px;
+		width: 100px;
+		line-height: 50px;
+		transition: ease-in 0.2s;
+		position:absolute;
+		top:45%; 
+		text-align: center;
+	}
+
+	.slideshow-buttons:hover {
+		color: rgba(0, 0, 0, 0.7);
 	}
 }

@@ -4,7 +4,7 @@ export default function vdpInfo(){
   return {
     restrict: 'EA',
     scope: {
-
+        item: '='
     },
     template: require("./vdpInfo.tpl.html"),
     controller: controller.UID,

@@ -4,21 +4,13 @@ class vdpImagesController {
   }
 
   /* @ngInject */
-  constructor($scope, ImageService) {
-    //this.title = "2016 Toyota Tundra 4WD";
+  constructor($scope) {
 
-    this.recordId = 625165;
-    this.record = {};
-    this.pictures = {};
-
-    // Get images
-    ImageService.getImages(this.recordId).then( (response) => { 
-      this.pictures = response.data;
-    });
-
-    ImageService.getInfo(this.recordId).then( (response) => { 
-      this.record = response.data[0]; 
-    });
+    // Format the photo strings (they did not work by default)
+    for(var i = 0; i < this.item.general_photo_list.length; i++) {
+      this.item.general_photo_list[i].src_set = `http://static.cdemo.com/${this.item.record_id}/1024/${this.item.general_photo_list[i].photo_name}`; 
+    }
+    
 
     // Current slide index
     this.slideIndex = 1;
@@ -32,29 +24,35 @@ class vdpImagesController {
   }
 
  
-
+  // Show the image in the modal
   showImage(element) {
+
     // Get the selected image
-    var x = this.pictures[this.slideIndex - 1];
+    var x = this.item.general_photo_list[this.slideIndex - 1];
+
 
     // Show it in modal
-    document.getElementById("modal-image").src = `http://static.cdemo.com/${this.recordId}/1024/${x.photo_name}`;
+    document.getElementById("modal-image").src = this.item.general_photo_list[this.slideIndex - 1].src_set;
     document.getElementById("image-modal").style.display = "block";
   }
 
 
+  // Increment the image counter
   plusDivs(n) {
     this.showDivs(this.slideIndex += n);
   }
 
 
+  // Show the image
   showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
 
+
     // Set the slideIndex (can wrap around)
     if (n > x.length) { this.slideIndex = 1; }    
     if (n < 1) {this.slideIndex = x.length; }
+
 
     // Hide all images
     for (i = 0; i < x.length; i++) {
@@ -66,6 +64,7 @@ class vdpImagesController {
   }
   
 
+  // Increments the modal image
   plusModal(n) {
 
     // Increment slide index
@@ -74,17 +73,17 @@ class vdpImagesController {
     if (this.slideIndex > x.length) {this.slideIndex = 1}    
     if (this.slideIndex < 1) {this.slideIndex = x.length};
 
+
     // Update the modal image
-    x = this.pictures[this.slideIndex - 1];
-    console.log(this.slideIndex);
-    document.getElementById("modal-image").src = `http://static.cdemo.com/${this.recordId}/1024/${x.photo_name}`;
+    document.getElementById("modal-image").src = this.item.general_photo_list[this.slideIndex - 1].src_set;
   }
 
 
+  // Closes the modal
   closeModal() {
     document.getElementById("image-modal").style.display = "none";
   }
 }
 
-vdpImagesController.$inject = ['$scope', 'ImageService'];
+vdpImagesController.$inject = ['$scope'];
 export default vdpImagesController;

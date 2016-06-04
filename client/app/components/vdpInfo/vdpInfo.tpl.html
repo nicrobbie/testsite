@@ -6,75 +6,75 @@
 				<table>
 					<tr>
 						<td>Price</td>
-						<td>{{vm.record.price | currency}}</td>
+						<td>{{vm.item.price | currency}}</td>
 					</tr>
 					<tr>
 						<td>Make</td>
-						<td>{{vm.record.make}}</td>
+						<td>{{vm.item.make}}</td>
 					</tr>
 					<tr>
 						<td>Model</td>
-						<td>{{vm.record.model}}</td>
+						<td>{{vm.item.model}}</td>
 					</tr>
 					<tr>
 						<td>Year</td>
-						<td>{{vm.record.year}}</td>
+						<td>{{vm.item.year}}</td>
 					</tr>
 					<tr>
 						<td>Condition</td>
-						<td>{{vm.record.condition}}</td>
+						<td>{{vm.item.condition}}</td>
 					</tr>
 					<tr>
 						<td>Odometer</td>
-						<td>{{vm.record.odemeter | number}}</td>
+						<td>{{vm.item.odemeter | number}}</td>
 					</tr>
 					<tr>
 						<td>MPG (City)</td>
-						<td>{{vm.record.fuel_economy_city}}</td>
+						<td>{{vm.item.fuel_economy_city}}</td>
 					</tr>
 					<tr>
 						<td>MPG (Hwy)</td>
-						<td>{{vm.record.fuel_economy_hwy}}</td>
+						<td>{{vm.item.fuel_economy_hwy}}</td>
 					</tr>
 					<tr>
 						<td>Fuel Type</td>
-						<td>{{vm.record.fuel_type}}</td>
+						<td>{{vm.item.fuel_type}}</td>
 					</tr>
 					<tr>
 						<td>Exterior</td>
-						<td>{{vm.record.exterior}}</td>
+						<td>{{vm.item.exterior}}</td>
 					</tr>
 					<tr>
 						<td>Interior</td>
-						<td>{{vm.record.interior}}</td>
+						<td>{{vm.item.interior}}</td>
 					</tr>
 					<tr>
 						<td>Engine</td>
-						<td>{{vm.record.engine}}</td>
+						<td>{{vm.item.engine}}</td>
 					</tr>
 					<tr>
 						<td>Transmission</td>
-						<td>{{vm.record.transmission}}</td>
+						<td>{{vm.item.transmission}}</td>
 					</tr>
 					<tr>
 						<td>Body Type</td>
-						<td>{{vm.record.body_type}}</td>
+						<td>{{vm.item.body_type}}</td>
 					</tr>
 					<tr>
 						<td>Drivetrain</td>
-						<td>{{vm.record.drivetrain}}</td>
+						<td>{{vm.item.drivetrain}}</td>
 					</tr>
 					<tr>
 						<td>Trim</td>
-						<td>{{vm.record.trim}}</td>
+						<td>{{vm.item.trim}}</td>
 					</tr>
 					<tr>
 						<td>Vin</td>
-						<td>{{vm.record.vin}}</td>
+						<td>{{vm.item.vin}}</td>
 					</tr>
 					<tr>
 						<td>Stock #</td>
-						<td>{{vm.record.stock_number}}</td>
+						<td>{{vm.item.stock_number}}</td>
 					</tr>
 				</table>
 			</div>
@@ -84,7 +84,7 @@
 			<div class="tab-content" id="tab-2-content">
 				<input type="search" ng-model="feature.search" placeholder="Search features" />
 				<ul id="feature-list">
-					<li ng-repeat="feature in vm.record.feature | filter : feature.search">
+					<li ng-repeat="feature in vm.item.feature | filter : feature.search">
 						{{feature}}
 					</li>
 				</ul>
