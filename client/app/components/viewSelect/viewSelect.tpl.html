@@ -1,11 +1,12 @@
 <div id="viewSelect-content">
-	<nav>
+	<nav id="viewSwitch">
 		<input type="radio" name="view" value="grid" id="grid" ng-model="vm.value" ng-click="showme=false">
 		<label for="grid">grid</label>
 
 		<input type="radio" name="view" value="list" id="list" ng-model="vm.value" ng-click="showme=true">
 		<label for="list">list</label>
 	</nav>  
+	<br><br>
 	<div>
 		<grid-view ng-hide="showme"></grid-view>
 		<list-view ng-show="showme"></list-view>

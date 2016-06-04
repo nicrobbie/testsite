@@ -6,27 +6,32 @@ $desktop: new-breakpoint(min-width 800px);
 
 	@include outer-container(90%);
 	.per{
-		@include span-columns(7 of 8);
+		@include span-columns(12 of 12);
 		@include media($desktop){
-			@include span-columns(3 of 8);
+			@include span-columns(4 of 12);
+			@include omega(3n);
 		}
+		width:100%;
+		margin:auto;
 	}
 	.pag{
-		@include shift (1 of 8);
-		@include span-columns(7 of 8);
+		@include span-columns(12 of 12);
 		@include media($desktop){
-			@include span-columns(3 of 8);
+			@include span-columns(4 of 12);
+			@include omega(3n);
 		}
-		display:inline-block;
-		padding:0;
-		margin:0;
+		width:100%;
+		margin:auto;
+		display:inline;
+		padding-bottom: 10px;
+		//margin:0;
 		li{
 			display:inline;
 			a{
-				float:left;
 				text-decoration:none;
 				background:lightgrey;
 				padding:5px;
+				margin:0 -3px 0 -3px;
 				color: black;
 				border: solid 1px grey;
 			}
@@ -35,7 +40,14 @@ $desktop: new-breakpoint(min-width 800px);
 			}
 		}
 	}
-	div.center{
-		display: inline-block;
+	//the view switch button from within viewSelect component, in here for neat
+	.viewSwitch{
+		@include span-columns(12 of 12);
+		@include media($desktop){
+			@include span-columns(4 of 12);
+			@include omega(3n);
+		}
+		width:100%;
+		margin:auto;
 	}
 }
