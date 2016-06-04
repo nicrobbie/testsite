@@ -4,14 +4,22 @@ $bg-color: #156ABB;
 //$bg-color: #8cc1f2;
 
 $desktop: new-breakpoint(min-width 1000px);
+
 #dealer-content {
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
+
+	
+
 	@include media($desktop) {
 		width: 80%;
 	}
 
+	
+	.party-name {
+		font-size: 75%;
+	}
 
 	ul {
 		list-style-type: none;
@@ -95,8 +103,4 @@ $desktop: new-breakpoint(min-width 1000px);
 			@include default-button-active();	
 		}
 	}
-
-
-
-	
 }

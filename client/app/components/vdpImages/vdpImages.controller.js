@@ -14,42 +14,76 @@ class vdpImagesController {
     // Get images
     ImageService.getImages(this.recordId).then( (response) => { 
       this.pictures = response.data;
-      console.log(this.pictures);
     });
 
     ImageService.getInfo(this.recordId).then( (response) => { 
       this.record = response.data[0]; 
-      console.log(this.record);
     });
 
     // Current slide index
     this.slideIndex = 1;
+
+
+    // Load the first picture when page is ready
+    angular.element(document).ready(function () {
+        var x = document.getElementsByClassName("mySlides");
+        x[0].style.display = "block";  
+    });
   }
 
+ 
 
   showImage(element) {
+    // Get the selected image
     var x = this.pictures[this.slideIndex - 1];
-    console.log(x);
-    document.getElementById("image-content").src = `http://static.cdemo.com/${this.recordId}/1024/${x.photo_name}`;
+
+    // Show it in modal
+    document.getElementById("modal-image").src = `http://static.cdemo.com/${this.recordId}/1024/${x.photo_name}`;
     document.getElementById("image-modal").style.display = "block";
   }
 
+
   plusDivs(n) {
     this.showDivs(this.slideIndex += n);
-    console.log("SlideIndex=" + this.slideIndex);
   }
+
 
   showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {this.slideIndex = 1}    
-    if (n < 1) {this.slideIndex = x.length} ;
+
+    // Set the slideIndex (can wrap around)
+    if (n > x.length) { this.slideIndex = 1; }    
+    if (n < 1) {this.slideIndex = x.length; }
+
+    // Hide all images
     for (i = 0; i < x.length; i++) {
        x[i].style.display = "none";  
     }
+
+    // Show the selected image
     x[this.slideIndex-1].style.display = "block";  
   }
   
+
+  plusModal(n) {
+
+    // Increment slide index
+    this.slideIndex += n
+    var x = document.getElementsByClassName("mySlides");
+    if (this.slideIndex > x.length) {this.slideIndex = 1}    
+    if (this.slideIndex < 1) {this.slideIndex = x.length};
+
+    // Update the modal image
+    x = this.pictures[this.slideIndex - 1];
+    console.log(this.slideIndex);
+    document.getElementById("modal-image").src = `http://static.cdemo.com/${this.recordId}/1024/${x.photo_name}`;
+  }
+
+
+  closeModal() {
+    document.getElementById("image-modal").style.display = "none";
+  }
 }
 
 vdpImagesController.$inject = ['$scope', 'ImageService'];

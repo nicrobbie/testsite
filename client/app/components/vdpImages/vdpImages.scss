@@ -40,6 +40,34 @@
 	}
 
 	
+	#modal-slideshow-buttons {
+	    position:fixed;
+	    top:50%;
+
+		.modal-slideshow-button {
+			@include default-button();
+		}
+		
+		#modal-slideshow-button-left {
+			width: 200px;
+			position:fixed;
+			left: 0px;
+		}
+
+		#modal-slideshow-button-right {
+			width: 200px;
+			position:fixed;
+			right: 0px;
+		}
+
+		.modal-slideshow-button:hover {
+			@include default-button-hover();
+		}
+
+		.modal-slideshow-button:active {
+			@include default-button-active();
+		}
+	}
 
 	.img-modal{
 		z-index:3;
@@ -87,6 +115,7 @@
 	    padding: 0;
 	    outline: 0;
 	    max-width: 1000px;
+	    cursor: pointer;
 	}
 
 	.image-animate-zoom {
