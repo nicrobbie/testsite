@@ -14,7 +14,7 @@ class mainController {
     this.products = products;
     this.productSelected = this.products[0];
     this.productCategorySelected = -1;
-console.log("This.products: " + this.products[0].name);
+    console.log("This.products: " + this.products[0].name);
     //this.products = products;
     //console.log(ProductService.getProducts().then(response => response.data));
     //console.log(products);
