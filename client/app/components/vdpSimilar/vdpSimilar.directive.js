@@ -4,7 +4,7 @@ export default function vdpSimilar(){
   return {
     restrict: 'EA',
     scope: {
-
+        item: '='
     },
     template: require("./vdpSimilar.tpl.html"),
     controller: controller.UID,
