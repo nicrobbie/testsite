@@ -4,20 +4,20 @@
  	
  	<div id="slideshow" style="position: relative">
  		<span ng-repeat="media in vm.item.general_photo_list">
- 			<img class="mySlides" style="display: none;" alt="{{media.seo_alt}}" title="{{media.seo_title}}" ng-src="{{media.src_set}}" ng-click="vm.showImage()">
+ 			<img class="mySlides" style="display: none;" alt="{{media.seo_alt}}" title="{{media.seo_title}}" ng-src="{{media.src_set}}" ng-click="showImage()">
  		</span>
- 		<a class="slideshow-buttons" style="left:0;" ng-click="vm.plusDivs(-1)">&#10094;</a>
-		<a class="slideshow-buttons" style="right:0;" ng-click="vm.plusDivs(1)">&#10095;</a>
+ 		<a class="slideshow-buttons" style="left:0;" ng-click="plusDivs(-1)">&#10094;</a>
+		<a class="slideshow-buttons" style="right:0;" ng-click="plusDivs(1)">&#10095;</a>
  	</div>
 	
 	<div id="image-modal" class="img-modal" ><!-- onclick="this.style.display='none'"> -->
-		<span class="close-button w3-hover-red w3-text-white" ng-click="vm.closeModal()">&times;</span>
+		<span class="close-button w3-hover-red w3-text-white" ng-click="closeModal()">&times;</span>
 		<div class="image-modal-content image-animate-zoom">
-			<span ng-click="vm.closeModal()">
+			<span ng-click="closeModal()">
 				<img id="modal-image" style="width:100%">
 			</span>
 		</div>
- 		<a class="slideshow-buttons" style="left:0; font-size: 500%;" ng-click="vm.plusModal(-1)">&#10094;</a>
-		<a class="slideshow-buttons" style="right:0; font-size: 500%;" ng-click="vm.plusModal(1)">&#10095;</a>
+ 		<a class="slideshow-buttons" style="left:0; font-size: 500%;" ng-click="plusModal(-1)">&#10094;</a>
+		<a class="slideshow-buttons" style="right:0; font-size: 500%;" ng-click="plusModal(1)">&#10095;</a>
 	</div>
 </div>

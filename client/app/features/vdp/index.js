@@ -20,11 +20,9 @@ export default angular.module("vdp" , [uirouter, vdpReserve, vdpTradein, vdpTest
   .config(routes)
   .run(run)
   .service('ItemService', function ($http, $q) {
-
   	this.getItem = function (id) {
   		return $http.jsonp(`http://live-uat.cdemo.com/jsonp/detail/${id}?callback=JSON_CALLBACK`);
   	};
-
   })
   .controller(controller.UID, controller)
   .name;

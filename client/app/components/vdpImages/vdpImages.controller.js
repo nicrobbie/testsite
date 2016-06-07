@@ -5,26 +5,27 @@ class vdpImagesController {
 
   /* @ngInject */
   constructor($scope) {
-
     // Format the photo strings (they did not work by default)
     for(var i = 0; i < this.item.general_photo_list.length; i++) {
       this.item.general_photo_list[i].src_set = `http://static.cdemo.com/${this.item.record_id}/1024/${this.item.general_photo_list[i].photo_name}`; 
     }
-    
 
     // Current slide index
-    this.slideIndex = 1;
-
+    //this.slideIndex = 1;
+    $scope.slideIndex = 1;
 
     // Load the first picture when page is ready
+    
     angular.element(document).ready(function () {
         var x = document.getElementsByClassName("mySlides");
         x[0].style.display = "block";  
     });
+    
   }
 
  
   // Show the image in the modal
+  /*
   showImage(element) {
 
     // Get the selected image
@@ -35,7 +36,7 @@ class vdpImagesController {
     document.getElementById("modal-image").src = this.item.general_photo_list[this.slideIndex - 1].src_set;
     document.getElementById("image-modal").style.display = "block";
   }
-
+  
 
   // Increment the image counter
   plusDivs(n) {
@@ -83,6 +84,7 @@ class vdpImagesController {
   closeModal() {
     document.getElementById("image-modal").style.display = "none";
   }
+  */
 }
 
 vdpImagesController.$inject = ['$scope'];
