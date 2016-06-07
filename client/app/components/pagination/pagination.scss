@@ -2,6 +2,7 @@
 @import "../../neat/neat";
 
 $desktop: new-breakpoint(min-width 800px);
+$cdemo: #156abb;
 #main{
 
 	@include outer-container(90%);
@@ -25,13 +26,22 @@ $desktop: new-breakpoint(min-width 800px);
 		display:inline;
 		padding-bottom: 10px;
 		//margin:0;
+
+		//the active page within pagination
+		li.ng-scope.active{
+			a{
+			background:$cdemo;
+			border: solid 1px black;
+			}
+		}
+
 		li{
 			display:inline;
 			a{
 				text-decoration:none;
 				background:lightgrey;
-				padding:5px;
-				margin:0 -3px 0 -3px;
+				padding:8px;
+				margin:0 0px 0 0px;
 				color: black;
 				border: solid 1px grey;
 			}

@@ -3,18 +3,18 @@
 	<div class="per">
 		<br>
 		Show
-		<select ng-model="vm.perPage">
+		<select ng-model="vm.pageSize" ng-init="pageSize = options[2]">
 	    	<option value="5">5</option>
 			<option value="10">10</option>
 			<option value="15">15</option>
 			<option value="20">20</option>
 			<option value="25">25</option>
 	    </select>
-	    {{vm.perPage}}
+	    {{vm.pageSize}}
 		per page
 	</div>
-
-	<div class="pag">
+	<dir-pagination-controls class="pag" boundary-links="true" on-page-change="vm.pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+	<!--<div class="pag">
 		<ul id="pagination">
 		  <li><a href=""><<</a></li>
 		  <li><a href="">1</a></li>
@@ -24,7 +24,7 @@
 		  <li><a href="">5</a></li>
 		  <li><a href="">>></a></li>
 		</ul>
-	</div>
+	</div>-->
 	<br>
 	<div id="views"><view-select></view-select></div>
 </div>

@@ -4,6 +4,7 @@ import './app.scss';
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
+import pagin from 'angular-utils-pagination';
 
 // Import base modules
 import config from './app.config';
@@ -36,7 +37,7 @@ import listView from './components/listView';
 
 
 
-export default angular.module('testsite', [uirouter, ngAnimate, footer, header, main, records, vdp, filterBank, pagination, gridView, vdpActions, vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, searchPanel, listView, socialMedia, upArrow, viewSelect])
+export default angular.module('testsite', [uirouter, ngAnimate, pagin, footer, header, main, records, vdp, filterBank, pagination, gridView, vdpActions, vdpBanner, vdpDealer, vdpImages, vdpInfo, vdpSimilar, searchPanel, listView, socialMedia, upArrow, viewSelect])
   .config(config)
   .config(routes)
   .constant("AppConstants", appConstants)

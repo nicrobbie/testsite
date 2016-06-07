@@ -12,7 +12,7 @@ export default class searchPanelController {
         options: {
             floor: 0,
             ceil: 100000,
-            step: 10000,
+            step: 5000,
             enforceStep: false,
             enforceRange: true
         }

@@ -54,13 +54,10 @@ $desktop: new-breakpoint(min-width 1000px);
 			transform: translate(0, -100%);
 			background: #000;
 		}*/
-
 		.hover-tile {
 			color: white;
 			height: inherit;
-			transition: all 0.3s ease-in-out;
 		}
-
 		.hover-tile-hidden {
 			background: transparentize(#000, 0.2);
 			height: 95%;
