@@ -14,7 +14,6 @@ search-panel{
         float: left;
     }
     .modal-fade-screen {
-        display: none;
         position: fixed;
         z-index: 1;
         left: 0;
@@ -25,9 +24,9 @@ search-panel{
         background-color: rgba(0,0,0,0.85);
     }
     .modal {
-        display: none;
+        display: block;
         position: fixed;
-        z-index: 2;
+        z-index: 5;
         left: 0;
         top: 0;
         height:100%;

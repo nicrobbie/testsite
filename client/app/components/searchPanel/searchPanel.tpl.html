@@ -1,98 +1,100 @@
 <div id="search-panel">
 	<!-- Trigger/Open The Modal -->
-	<button id="searchBtn" class="action-button" ng-click="vm.openModal()">🔍</button>
-	<!-- The Modal fade-->
-	<div id="myModal" class="modal-fade-screen" ng-click="vm.closeModal()"></div>
-	<!-- Modal content -->
-	<div id="myContent" class="modal">
-		<span class="close" ng-click="vm.closeModal()">X &nbsp</span>
-		<form action="search">
-			<div class="options">
-			  	<h3>Search Term</h3>
-			  	<input class="search" type="text" name="term" placeholder=" 🔍  Search term"></input>
-			  	<hr>
-			  	
-			  	<h3>Product</h3>
-			  	<input type="select" placeholder="Any product"></input>
-			  	<hr>
+	<button id="searchBtn" class="action-button" ng-click="toggle=true">🔍</button>
+	<div ng-show="toggle">
+		<!-- The Modal fade-->
+		<div id="myModal" class="modal-fade-screen" ng-click="toggle=false"></div>
+		<!-- Modal content -->
+		<div id="myContent" class="modal">
+			<span class="close" ng-click="toggle=false">X &nbsp</span>
+			<form action="search">
+				<div class="options">
+				  	<h3>Search Term</h3>
+				  	<input class="search" type="text" name="term" placeholder=" 🔍  Search term"></input>
+				  	<hr>
+				  	
+				  	<h3>Product</h3>
+				  	<input type="select" placeholder="Any product"></input>
+				  	<hr>
 
-			  	<h3>Category</h3>
-			  	<input type="select" placeholder="Any category"></input>
-			  	<hr>
+				  	<h3>Category</h3>
+				  	<input type="select" placeholder="Any category"></input>
+				  	<hr>
 
-			  	<!--<select id="product" ng-model="main.productSelected" ng-options="p.name for p in main.products"></select>
-			  	<hr>
-			  	
-			  	<h3 ng-show="main.productSelected">Category</h3>
-	  			<select id="product" ng-show="main.productSelected" ng-model="main.productCategorySelected" ng-options="c.name for c in main.productSelected.categories">
-					<option value="">All</option>
-				</select>
-			  	<hr>-->
-			  	
-			  	<h3>Make</h3>
-			  	<input type="select" placeholder="Any make"></input>
-			  	<hr>
+				  	<!--<select id="product" ng-model="main.productSelected" ng-options="p.name for p in main.products"></select>
+				  	<hr>
+				  	
+				  	<h3 ng-show="main.productSelected">Category</h3>
+		  			<select id="product" ng-show="main.productSelected" ng-model="main.productCategorySelected" ng-options="c.name for c in main.productSelected.categories">
+						<option value="">All</option>
+					</select>
+				  	<hr>-->
+				  	
+				  	<h3>Make</h3>
+				  	<input type="select" placeholder="Any make"></input>
+				  	<hr>
 
-			  	<h3>Model</h3>
-			  	<input type="select" placeholder="Any model"></input>
-			  	<hr>
+				  	<h3>Model</h3>
+				  	<input type="select" placeholder="Any model"></input>
+				  	<hr>
 
-			  	<h3>Price (slider)</h3><br>
-	            <rzslider rz-slider-model="vm.priceRangeSlider.minValue" rz-slider-high="vm.priceRangeSlider.maxValue" rz-slider-options="vm.priceRangeSlider.options" style="width:80%; margin: auto;" id="priceSlider"></rzslider>
-				<br><br>
-				<table>
-					<tr>
-						<td>Min:<br>$<input type="number" ng-model="vm.priceRangeSlider.minValue" step="5000"/></td>
-	            		<td>Max:<br>$<input type="number" ng-model="vm.priceRangeSlider.maxValue" step="5000"/></td>
-	            	</tr>
-	            </table>
-			  	<hr>
-			  	
-			  	<h3>Kilometers(slider)</h3><br>
-			  	<rzslider rz-slider-model="vm.kmRangeSlider.minValue" rz-slider-high="vm.kmRangeSlider.maxValue" rz-slider-options="vm.kmRangeSlider.options" style="width:80%; margin: auto;"></rzslider>
-				<br><br>
-				<table>
-					<tr>
-						<td>Min:<br> <input type="number" ng-model="vm.kmRangeSlider.minValue" step="10000" /></td>
-		            	<td>Max:<br> <input type="number" ng-model="vm.kmRangeSlider.maxValue" step="10000" /></td>
-		        	</tr>
-		        </table>
-			  	<hr>
+				  	<h3>Price (slider)</h3><br>
+		            <rzslider rz-slider-model="vm.priceRangeSlider.minValue" rz-slider-high="vm.priceRangeSlider.maxValue" rz-slider-options="vm.priceRangeSlider.options" style="width:80%; margin: auto;" id="priceSlider"></rzslider>
+					<br><br>
+					<table>
+						<tr>
+							<td>Min:<br>$<input type="number" ng-model="vm.priceRangeSlider.minValue" step="5000"/></td>
+		            		<td>Max:<br>$<input type="number" ng-model="vm.priceRangeSlider.maxValue" step="5000"/></td>
+		            	</tr>
+		            </table>
+				  	<hr>
+				  	
+				  	<h3>Kilometers(slider)</h3><br>
+				  	<rzslider rz-slider-model="vm.kmRangeSlider.minValue" rz-slider-high="vm.kmRangeSlider.maxValue" rz-slider-options="vm.kmRangeSlider.options" style="width:80%; margin: auto;"></rzslider>
+					<br><br>
+					<table>
+						<tr>
+							<td>Min:<br> <input type="number" ng-model="vm.kmRangeSlider.minValue" step="10000" /></td>
+			            	<td>Max:<br> <input type="number" ng-model="vm.kmRangeSlider.maxValue" step="10000" /></td>
+			        	</tr>
+			        </table>
+				  	<hr>
 
-			  	<h3>Year (slider)</h3><br>
-			  	<rzslider rz-slider-model="vm.yearRangeSlider.minValue" rz-slider-high="vm.yearRangeSlider.maxValue" rz-slider-options="vm.yearRangeSlider.options" style="width:80%; margin: auto;"></rzslider>
-				<br><br>
-				<table>
-					<tr>
-						<td>Min:<br> <input type="number" ng-model="vm.yearRangeSlider.minValue" step="1" /></td>
-	            		<td>Max:<br> <input type="number" ng-model="vm.yearRangeSlider.maxValue" step="1" /></td>
-	            	</tr>
-	            	</table>
-			  	<hr>
+				  	<h3>Year (slider)</h3><br>
+				  	<rzslider rz-slider-model="vm.yearRangeSlider.minValue" rz-slider-high="vm.yearRangeSlider.maxValue" rz-slider-options="vm.yearRangeSlider.options" style="width:80%; margin: auto;"></rzslider>
+					<br><br>
+					<table>
+						<tr>
+							<td>Min:<br> <input type="number" ng-model="vm.yearRangeSlider.minValue" step="1" /></td>
+		            		<td>Max:<br> <input type="number" ng-model="vm.yearRangeSlider.maxValue" step="1" /></td>
+		            	</tr>
+		            	</table>
+				  	<hr>
 
-			  	<h3>Transmission</h3>
-			  	<input type="select" placeholder="Any transmission"></input>
-			  	<hr>
-				
-				<h3>Engine</h3>
-				<input type="select" placeholder="Any engine"></input>
-				<hr>
-				
-				<h3>Trim</h3>
-				<input type="select" placeholder="Any trim"></input>
-				<hr>
-				
-				<h3>Trim</h3>
-				<input type="select" placeholder="Any trim"></input>
-				<hr>
-				
-				<h3>Trim</h3>
-				<input type="select" placeholder="Any trim"></input>
-			</div>
-			<div class="buttons">
-				<button type="reset" id="reset">Reset</button>
-				<button type="submit" id="submit">Submit</button>
-			</div>
-		</form>
+				  	<h3>Transmission</h3>
+				  	<input type="select" placeholder="Any transmission"></input>
+				  	<hr>
+					
+					<h3>Engine</h3>
+					<input type="select" placeholder="Any engine"></input>
+					<hr>
+					
+					<h3>Trim</h3>
+					<input type="select" placeholder="Any trim"></input>
+					<hr>
+					
+					<h3>Trim</h3>
+					<input type="select" placeholder="Any trim"></input>
+					<hr>
+					
+					<h3>Trim</h3>
+					<input type="select" placeholder="Any trim"></input>
+				</div>
+				<div class="buttons">
+					<button type="reset" id="reset">Reset</button>
+					<button type="submit" id="submit">Submit</button>
+				</div>
+			</form>
+		</div>
 	</div>
 </div>

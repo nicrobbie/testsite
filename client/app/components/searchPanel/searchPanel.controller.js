@@ -41,23 +41,4 @@ export default class searchPanelController {
         }
     };
   }
-
-  openModal($timeout) {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "block";
-
-    var content = document.getElementById("myContent");
-    content.style.display = "block";
-
-    /*$timeout(function () {
-        this.$broadcast('rzSliderForceRender');
-    });*/
-  }
-
-  closeModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-    var content = document.getElementById("myContent");
-    content.style.display = "none";
-  }
 }
