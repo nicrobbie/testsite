@@ -15,8 +15,13 @@ import config from './records.config';
 
 
 export default angular.module("records" , [uirouter])
-.config(config)
+	.config(config)
   .config(routes)
-.run(run)
+	.run(run)
+	.service('RecordsService', function ($http, $q) {
+	  	this.getItem = function (id) {
+	  		return $http.jsonp(`http://live-uat.cdemo.com/jsonp/${id}?callback=JSON_CALLBACK`);
+  		};
+  	})
   .controller(controller.UID, controller)
   .name;

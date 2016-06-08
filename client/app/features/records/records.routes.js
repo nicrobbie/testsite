@@ -11,7 +11,18 @@ export default function routes($stateProvider) {
     url: "/records",
     template: require("./records.tpl.html"),
     controller: controller.UID,
-    controllerAs: "records"
+    controllerAs: "records",
+    resolve: {
+            item: [
+            'RecordsService',
+            function (RecordsService) {
+                return RecordsService.getItem(20077)
+                .then(response => {
+                    return response.data;
+                });
+            }
+            ]
+        }
   }).state("records.state2", {
     url: "/state2",
     template: "<h1>State 2</h1>"

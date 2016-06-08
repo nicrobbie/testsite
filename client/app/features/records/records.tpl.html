@@ -9,8 +9,23 @@
 			<search-panel></search-panel>
 		 	<filter-bank></filter-bank>
 		 	<pagination></pagination>
+			
+			<div id="viewSelect-content">
+			 	<nav id="viewSwitch">
+					<input type="radio" name="view" value="grid" id="grid" ng-model="records.value" ng-click="showme=false">
+					<label for="grid">grid</label>
+
+					<input type="radio" name="view" value="list" id="list" ng-model="records.value" ng-click="showme=true">
+					<label for="list">list</label>
+				</nav>  
+				<br><br>
+				<div>
+					<grid-view ng-hide="showme"  item="records.item"></grid-view>
+					<list-view ng-show="showme"  item="records.item"></list-view>
+				</div>
+			</div>
 		 	<!--<view-select></view-select>-->
-		 	<!--<grid-view></grid-view>-->
+		 	<!--<grid-view item="records.item"></grid-view>-->
 			<!--<list-view></list-view>-->
 	 	</div>
 	</div>

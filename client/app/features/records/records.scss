@@ -1,3 +1,4 @@
+$cdemo: #156abb;
 #wrapper{
 	background-color: #EFEFEF;
 	margin: auto;
@@ -19,4 +20,25 @@
 	#per-page{
 		display:inline;
 	}
+#viewSelect-content{
+	input[type=radio] {
+		display: none;
+	}
+	label {
+		border: outset 1px silver;
+		padding: 2px 16px;
+		margin-right: -5px;
+		background: #ddd;
+		cursor: pointer;
+	}
+
+	input:checked + label {
+		border: inset 1px darken($cdemo, 15%);   
+		background: $cdemo;
+	}
+	.view{
+		width:100%;
+		height:100%;
+	}
+}
 }

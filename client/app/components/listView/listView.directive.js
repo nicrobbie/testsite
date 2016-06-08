@@ -4,7 +4,7 @@ export default function listView(){
   return {
     restrict: 'EA',
     scope: {
-
+        item: '='
     },
     template: require("./listView.tpl.html"),
     controller: controller.UID,

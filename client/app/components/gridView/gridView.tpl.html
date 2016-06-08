@@ -1,5 +1,23 @@
 <div id="gridview-content">
-<div class="hover-tile-outer" dir-paginate="x in vm.records| itemsPerPage:2">
+<div class="hover-tile-outer" dir-paginate="x in vm.item| itemsPerPage:10">
+    <div class="hover-tile-container">
+      <div class="spacer" ng-show="show"></div>
+      <div class="hover-tile hover-tile-visible" ng-hide="show"></div>
+        <div class="popper">
+          <div class="bringUp" ng-click="show=true" ng-hide="show" ng-animate="anim">⇖⇑⇑⇑⇑⇑⇑⇗</div>
+          <div class="bringUp" ng-click="show=false" ng-show="show" ng-animate="anim">⇙⇓⇓⇓⇓⇓⇓⇘</div>
+        </div>
+      <div class="hover-tile hover-tile-hidden" ng-click="show=false">
+        <h4>{{x.title}}</h4>
+        <p>Price: {{x.price | currency}}</p>
+        <p>Odometer: {{x.odemeter | number}}</p>
+        <p>Exterior: {{x.exterior}}</p>
+        <p>Drivetrain: {{x.drivetrain}}</p>
+      </div>
+    </div>
+  </div>
+
+<!--<div class="hover-tile-outer" dir-paginate="x in vm.records| itemsPerPage:2">
     <div class="hover-tile-container">
       <div class="spacer" ng-show="show"></div>
       <div class="hover-tile hover-tile-visible" ng-hide="show"></div>
@@ -15,11 +33,11 @@
         <p>Drivetrain: {{x.drivetrain}}</p>
       </div>
     </div>
-  </div>
+  </div>-->
 
 
   
-  <!--<div class="hover-tile-outer" ng-repeat="x in vm.records| limitTo:4">
+  <!--<div class="hover-tile-outer">
     <div class="hover-tile-container">
       <div class="spacer" ng-show="show"></div>
       <div class="hover-tile hover-tile-visible" ng-hide="show"></div>
@@ -28,11 +46,11 @@
           <div class="bringUp" ng-click="show=false" ng-show="show" ng-animate="anim">⇙⇓⇓⇓⇓⇓⇓⇘</div>
         </div>
       <div class="hover-tile hover-tile-hidden" ng-click="show=false">
-        <h4>{{x.title}}</h4>
-        <p>Price: {{x.price}}</p>
-        <p>Odometer: {{x.odemeter}}</p>
-        <p>Exterior: {{x.exterior}}</p>
-        <p>Drivetrain: {{x.drivetrain}}</p>
+        <h4>{{vm.item.title}}</h4>
+        <p>Price: {{vm.item.price | currency}}</p>
+        <p>Odometer: {{vm.item.odemeter | number}}</p>
+        <p>Exterior: {{vm.item.exterior}}</p>
+        <p>Drivetrain: {{vm.item.drivetrain}}</p>
       </div>
     </div>
   </div>-->
