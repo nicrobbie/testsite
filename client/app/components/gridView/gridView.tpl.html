@@ -1,76 +1,42 @@
 <div id="gridview-content">
-<div class="hover-tile-outer" dir-paginate="x in vm.item| itemsPerPage:10">
-    <div class="hover-tile-container">
-      <div class="spacer" ng-show="show"></div>
-      <div class="hover-tile hover-tile-visible" ng-hide="show"></div>
+  <div class="gridTile" dir-paginate="x in vm.item| itemsPerPage:10" style="background-image: url({{x.primary_photo}})">
+      <!--<div class="spacer" ng-show="show"></div>-->
+      <!--<div class="hover-tile hover-tile-visible" ng-hide="show"></div>-->
+      <div class="drawer">  
         <div class="popper">
           <div class="bringUp" ng-click="show=true" ng-hide="show" ng-animate="anim">⇖⇑⇑⇑⇑⇑⇑⇗</div>
           <div class="bringUp" ng-click="show=false" ng-show="show" ng-animate="anim">⇙⇓⇓⇓⇓⇓⇓⇘</div>
         </div>
-      <div class="hover-tile hover-tile-hidden" ng-click="show=false">
-        <h4>{{x.title}}</h4>
+        <h4 ng-click="show = !show">{{x.title}}</h4>
+      
+        <div class="details" ng-show="show" ng-click="show = !show">
+          <p>Price: {{x.price | currency}}</p>
+          <p>Odometer: {{x.odemeter | number}}</p>
+          <p>Exterior: {{x.exterior}}</p>
+          <p>Drivetrain: {{x.drivetrain}}</p>
+        </div>
+      </div>
+  </div>
+
+  <!--<div class="hover-tile-outer" dir-paginate="x in vm.item| itemsPerPage:10" style="background-image: url({{x.primary_photo}})">
+    <div class="hover-tile-container">
+      <!--<div class="spacer" ng-show="show"></div>-->
+      <!--<div class="hover-tile hover-tile-visible" ng-hide="show"></div>
+      <div id="alwaysShow">  
+        <div class="popper">
+          <div class="bringUp" ng-click="show=true" ng-hide="show" ng-animate="anim">⇖⇑⇑⇑⇑⇑⇑⇗</div>
+          <div class="bringUp" ng-click="show=false" ng-show="show" ng-animate="anim">⇙⇓⇓⇓⇓⇓⇓⇘</div>
+        </div>
+        <h4 ng-click="show = !show">{{x.title}}</h4>
+      </div>
+      
+      <div class="hover-tile hover-tile-hidden" ng-show="show" ng-click="show = !show">
         <p>Price: {{x.price | currency}}</p>
         <p>Odometer: {{x.odemeter | number}}</p>
         <p>Exterior: {{x.exterior}}</p>
         <p>Drivetrain: {{x.drivetrain}}</p>
       </div>
-    </div>
-  </div>
 
-<!--<div class="hover-tile-outer" dir-paginate="x in vm.records| itemsPerPage:2">
-    <div class="hover-tile-container">
-      <div class="spacer" ng-show="show"></div>
-      <div class="hover-tile hover-tile-visible" ng-hide="show"></div>
-        <div class="popper">
-          <div class="bringUp" ng-click="show=true" ng-hide="show" ng-animate="anim">⇖⇑⇑⇑⇑⇑⇑⇗</div>
-          <div class="bringUp" ng-click="show=false" ng-show="show" ng-animate="anim">⇙⇓⇓⇓⇓⇓⇓⇘</div>
-        </div>
-      <div class="hover-tile hover-tile-hidden" ng-click="show=false">
-        <h4>{{x.title}}</h4>
-        <p>Price: {{x.price}}</p>
-        <p>Odometer: {{x.odemeter}}</p>
-        <p>Exterior: {{x.exterior}}</p>
-        <p>Drivetrain: {{x.drivetrain}}</p>
-      </div>
-    </div>
-  </div>-->
-
-
-  
-  <!--<div class="hover-tile-outer">
-    <div class="hover-tile-container">
-      <div class="spacer" ng-show="show"></div>
-      <div class="hover-tile hover-tile-visible" ng-hide="show"></div>
-        <div class="popper">
-          <div class="bringUp" ng-click="show=true" ng-hide="show" ng-animate="anim">⇖⇑⇑⇑⇑⇑⇑⇗</div>
-          <div class="bringUp" ng-click="show=false" ng-show="show" ng-animate="anim">⇙⇓⇓⇓⇓⇓⇓⇘</div>
-        </div>
-      <div class="hover-tile hover-tile-hidden" ng-click="show=false">
-        <h4>{{vm.item.title}}</h4>
-        <p>Price: {{vm.item.price | currency}}</p>
-        <p>Odometer: {{vm.item.odemeter | number}}</p>
-        <p>Exterior: {{vm.item.exterior}}</p>
-        <p>Drivetrain: {{vm.item.drivetrain}}</p>
-      </div>
-    </div>
-  </div>-->
-
-
-  <!--<div class="hover-tile-outer">
-    <div class="hover-tile-container">
-      <div class="spacer" ng-show="show"></div>
-      <div class="hover-tile hover-tile-visible" ng-hide="show"></div>
-      <!--<up-arrow item="vm.item"></up-arrow>--
-        <div class="popper">
-          <!--<div class="bringUp" ng-click="show=true">⇖⇑⇑⇑⇑⇑⇑⇗</div>
-          <div class="bringDown" ng-click="show=false" ng-show="show">⇙⇓⇓⇓⇓⇓⇓⇘</div>--
-          <div class="bringUp" ng-click="show=true" ng-hide="show">⇖⇑⇑⇑⇑⇑⇑⇗</div>
-          <div class="bringDown" ng-click="show=false" ng-show="show">⇙⇓⇓⇓⇓⇓⇓⇘</div>
-        </div>
-      <div class="hover-tile hover-tile-hidden" ng-click="show=false">
-        <h4>Honda Civic AWD 4Dr SDN</h4>
-        <p>Price: $25 000<br>Odometer: 15 000 Km<br>Exterior: Silver<br>Interior: Black Leather</p>
-      </div>
     </div>
   </div>-->
 </div>

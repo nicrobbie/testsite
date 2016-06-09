@@ -51,7 +51,7 @@ $cdemo: #156abb;
 		}
 	}
 	//the view switch button from within viewSelect component, in here for neat
-	.viewSwitch{
+	#viewSelect-content{
 		@include span-columns(12 of 12);
 		@include media($desktop){
 			@include span-columns(4 of 12);
@@ -59,5 +59,24 @@ $cdemo: #156abb;
 		}
 		width:100%;
 		margin:auto;
+		input[type=radio] {
+			display: none;
+		}
+		label {
+			border: outset 1px silver;
+			padding: 2px 16px;
+			margin-right: -5px;
+			background: #ddd;
+			cursor: pointer;
+		}
+
+		input:checked + label {
+			border: inset 1px darken($cdemo, 15%);   
+			background: $cdemo;
+		}
+		.view{
+			width:100%;
+			height:100%;
+		}
 	}
 }

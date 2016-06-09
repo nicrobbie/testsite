@@ -7,10 +7,15 @@ $desktop: new-breakpoint(min-width 1000px);
 	@include outer-container(95%);
 	margin-right: auto;
 	margin-left: auto;
-	.spacer{
-		height: 55px;
-	}
-	.hover-tile-outer {
+
+	.gridTile{
+		position:relative;
+		height:350px;
+		background-size: cover;
+		margin-bottom: 15px;
+		display: inline-block;
+		overflow: visible;
+		border:1px solid grey;
 		@include span-columns(12);
 
 		@include media($desktop) {
@@ -21,7 +26,57 @@ $desktop: new-breakpoint(min-width 1000px);
 			@include span-columns(5);
 			margin-left: 48px;
 		}
-		background: url("http://o.aolcdn.com/commerce/autodata/images/USC60HOC021A121001.jpg");
+
+		.drawer{
+			margin: 0;
+			color:white;
+			position:absolute;
+			bottom:0;
+			width:100%;
+			height:auto;
+			h4{
+				background: transparentize(#000, 0.2);
+				margin: 0;
+				padding: 3px;
+			}
+			.details{
+				margin: 0;
+				background: transparentize(#000, 0.2);
+				position:relative;
+				top:0;
+				height:100%;
+				p{
+					margin: 0;
+					text-align: left;
+					padding-left: 3px;
+					line-height: 1.5em;
+				}
+			}
+		}
+	}
+
+
+	/*@include outer-container(95%);
+	margin-right: auto;
+	margin-left: auto;
+	height: 350px;
+
+	.spacer{
+		height: 55px;
+	}
+	.hover-tile-outer {
+		height: 350px;
+		position:relative;
+		@include span-columns(12);
+
+		@include media($desktop) {
+			@include span-columns(3);
+    		@include omega(4n);
+		}
+		@media only screen and (min-width:700px) and (max-width: 1000px){
+			@include span-columns(5);
+			margin-left: 48px;
+		}
 
 		background-size: cover;
 		margin-bottom: 15px;
@@ -36,7 +91,6 @@ $desktop: new-breakpoint(min-width 1000px);
 			position: relative;
 			bottom: 55px;
 		}
-
 		.popper{
 			color:white;
 			background: transparentize(#000, 0.2);
@@ -46,33 +100,37 @@ $desktop: new-breakpoint(min-width 1000px);
 			padding-top:10px;
 			padding-bottom:5px;
 			margin:auto;
+			cursor:pointer;
 		}
 
+		h4 {
+			margin: 0;
+			padding-top: 3px;
+			color:white;
+			background: transparentize(#000, 0.2);
+		}
 		/*.hover-tile-container:hover > .hover-tile {
 			position: relative;
 			bottom: -30px;
 			transform: translate(0, -100%);
 			background: #000;
 		}*/
-		.hover-tile {
+		/*.hover-tile-visible{
 			color: white;
-			height: inherit;
+			height: 100%;
 		}
 		.hover-tile-hidden {
 			background: transparentize(#000, 0.2);
 			height: 95%;
+			cursor: pointer;
 			//height: auto; makes it only come up to end of details
 			p {
 				text-align: left;
 				color: white;
 				line-height: 1.5em;
-				margin-bottom: 0;
+				margin: 0;
 			}
 
-			h4 {
-				margin: 0 0 0.5em 0;
-				padding-top: 3px;
-			}
 		}
-	}
+	}*/
 }

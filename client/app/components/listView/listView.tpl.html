@@ -2,12 +2,12 @@
 <div class="listview-content" dir-paginate="x in vm.item| itemsPerPage:10">
 	<div class="list">
 		<div class="title"><h1>{{x.title}}</h1><hr></div>
-		<img class="image" src="http://o.aolcdn.com/commerce/autodata/images/USC60HOC021A121001.jpg">
+		<img class="image" src="{{x.primary_photo}}">
 		<div class="details">
-	    	<p>Price: {{x.price}}</p>
-        	<p>Odometer: {{x.odemeter}}</p>
-        	<p>Exterior: {{x.exterior}}</p>
-        	<p>Drivetrain: {{x.drivetrain}}</p>
+	    	<p>Price: {{x.price | currency}}</p>
+         	<p>Odometer: {{x.odemeter | number}}</p>
+          	<p>Exterior: {{x.exterior}}</p>
+          	<p>Drivetrain: {{x.drivetrain}}</p>
 	    </div>
 	</div>
 </div>
