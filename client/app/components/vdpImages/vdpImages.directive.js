@@ -33,11 +33,10 @@ export default function vdpImages(){
         scope.showDivs = function(n) {
           var i;
           var x = document.getElementsByClassName("mySlides");
-
+          
           // Set the slideIndex (can wrap around)
           if (n > x.length) { scope.slideIndex = 1; }    
           if (n < 1) {scope.slideIndex = x.length; }
-
 
           // Hide all images
           for (i = 0; i < x.length; i++) {
