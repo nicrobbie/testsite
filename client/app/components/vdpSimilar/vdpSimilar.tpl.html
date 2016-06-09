@@ -1,8 +1,10 @@
 
 <h1>Similar Products</h1>
 <div id="similar-content">
-	<span ng-repeat="media in similarRecordsImages">
-		<img class="similarSlides" src="{{media}}" ng-click="showImage()">
-		{{media}}
-	</span>
+	<div ng-repeat="media in similarRecords" >
+		<h4 title="{{media.title}}">{{media.title | limitTo: 30}}{{media.title.length > 30 ? "..." : ""}}</h4></br>
+		<a href="{{media.record_id}}">
+			<img class="similarSlides" title="{{media.title}}" ng-src="{{media.primary_photo}}" ng-click="showImage()" height="300px" width="300px">
+		</a>
+	</div>
 </div>
