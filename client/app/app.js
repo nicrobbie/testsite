@@ -4,7 +4,7 @@ import './app.scss';
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
-//import pagin from 'angular-utils-pagination';
+import pagin from 'angular-utils-pagination';
 
 // Import base modules
 import config from './app.config';
